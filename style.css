@@ -119,3 +119,15 @@ p{margin:0 0 16px}.kicker{color:var(--muted);margin-top:-6px}.mt{margin-top:8px}
 .c-time { font-size:12px; color:var(--muted); }
 .c-text { margin:6px 0 0; white-space:pre-wrap; word-break:break-word; }
 .empty { color:var(--muted); }
+
+/* Epigraph */
+.epigraph {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--brand);
+  background: var(--card);
+  border-radius: 10px;
+}
+:root.light .epigraph { background: #fff; }
+.epigraph p { margin: 0 0 6px; font-size: clamp(16px, 2.2vw, 18px); }
+.epigraph cite { display: block; color: var(--muted); font-style: normal; font-size: 14px; }
