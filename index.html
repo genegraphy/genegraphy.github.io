@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HCAI·XR Lab — SuJin Lee</title>
-  <meta name="description" content="Human-Centered AI & XR Lab at Sejong University, led by SuJin Lee. Generative AI, Computer Vision, and XR research." />
+  <title>SuJin Lee — Profile</title>
+  <meta name="description" content="SuJin Lee | Profile — Career, Education, Publications, Projects, Activities">
   <meta name="theme-color" content="#0ea5e9" />
-  <link rel="icon" href="assets/logo.svg" />
+  <link rel="icon" href="assets/favicon.svg" />
   <link rel="preload" href="style.css" as="style" />
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
@@ -15,182 +15,151 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="HCAI·XR Lab home">
-        <img src="assets/logo.svg" alt="" class="logo" /> <span>HCAI·XR Lab</span>
-      </a>
+      <a class="brand" href="#top" aria-label="Home">SuJin<span>Lee</span></a>
       <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">메뉴</button>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
         <ul id="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#people">People</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#news">News</a></li>
-          <li><a href="#openings">Openings</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#intro" data-i18n="nav_intro">Intro</a></li>
+          <li><a href="#career" data-i18n="nav_career">Career</a></li>
+          <li><a href="#education" data-i18n="nav_education">Education</a></li>
+          <li><a href="#publications" data-i18n="nav_publications">Publications</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#activity" data-i18n="nav_activity">Activity</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
-      <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+      <div class="actions">
+        <button id="lang-ko" class="chip" aria-pressed="true">한국어</button>
+        <button id="lang-en" class="chip" aria-pressed="false">EN</button>
+        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+      </div>
     </div>
   </header>
 
-  <section class="hero" id="top" role="region" aria-label="Intro">
+  <section id="intro" class="hero" role="region" aria-label="Intro">
     <div class="container hero-inner">
       <div class="hero-text">
-        <h1>Human‑Centered AI & XR Lab</h1>
-        <p class="kicker">Generative AI × Computer Vision × XR</p>
-        <p>우리는 생성형 AI와 컴퓨터 비전을 통해 누구나 몰입형 경험을 만들 수 있는 <strong>포용적 창작 도구</strong>를 연구합니다. 텍스트-투-3D, 감정 인지 인터랙션, 그리고 실시간 Unity 연동에 초점을 둡니다.</p>
+        <h1 data-i18n="intro_title">Generative AI · Computer Vision · XR</h1>
+        <p class="kicker" data-i18n="intro_subtitle">Researcher & Educator</p>
+        <p class="mt" data-i18n="intro_desc_ko" data-lang="ko">
+          안녕하세요, 이수진입니다. 생성형 인공지능과 컴퓨터 비전을 기반으로 XR(AR/VR/MR) 콘텐츠 자동 생성, 상호작용, 교육 응용을 연구합니다.
+          아래 섹션의 내용은 모두 <strong>직접 수정</strong>할 수 있도록 플레이스홀더로 넣어두었습니다.
+        </p>
+        <p class="mt" data-i18n="intro_desc_en" data-lang="en" hidden>
+          Hello, I'm SuJin Lee. I work on generative AI and computer vision for XR (AR/VR/MR) content generation, interaction, and education.
+          All sections below are <strong>fully editable</strong> with placeholders you can replace.
+        </p>
         <div class="hero-cta">
-          <a class="btn" href="#openings">Join Us</a>
-          <a class="btn ghost" href="#publications">Publications</a>
+          <a class="btn" href="#projects" data-i18n="cta_projects">See Projects</a>
+          <a class="btn ghost" href="#publications" data-i18n="cta_publications">Read Publications</a>
         </div>
       </div>
       <div class="hero-card" aria-hidden="true">
         <div class="orb"></div>
         <div class="orb small"></div>
-        <div class="mesh">GEN • XR • CV</div>
+        <div class="mesh">AI • XR • CV</div>
       </div>
     </div>
   </section>
 
   <main id="main">
-    <section id="about" class="section">
-      <div class="container two-col">
-        <div>
-          <h2>About the Lab</h2>
-          <p>HCAI for Media and Creativity Lab <strong>Sujin Lee is an assistant professor  at the Department of Artificial Intelligence at Sejong University.
-
-My research currently focuses on an interdisciplinary project between art and artificial intelligence, aiming to create new images via computing, specifically computer vision and machine learning algorithms. Similar to a pencil or paintbrush, Sujin believes that computers are our tools. She believes we can use them as an extension of ourselves in order to expand on our creativity and push the boundaries of art. </strong>Sujin aspires to sophisticate AI to the point at which we can complete complex, abstract, and creative tasks. Her studies capitalize on the vital collaboration between humans and machines.</p>
-          <ul class="pill-list">
-            <li>Text‑to‑3D & Neural Rendering</li>
-            <li>Emotion‑aware Interaction</li>
-            <li>Inclusive Creative Tools for Education</li>
-          </ul>
-          <div class="links">
-            <a class="btn" href="#" aria-label="Download CV">PI CV (PDF)</a>
-            <a class="btn ghost" href="mailto:hello@example.com">Email</a>
-            <a class="btn ghost" href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
-        <aside class="card">
-          <h3>Quick Facts</h3>
-          <ul class="kv">
-            <li><span>Affiliation</span><strong>Sejong Univ.</strong></li>
-            <li><span>Focus</span><strong>GenAI • XR • CV</strong></li>
-            <li><span>Keywords</span><strong>Text‑to‑3D, NeRF, Unity</strong></li>
-            <li><span>Openings</span><strong>MS/RA/UG positions</strong></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-
-    <section id="people" class="section alt">
+    <section id="career" class="section">
       <div class="container">
-        <h2>People</h2>
-        <ul class="cards people">
-          <li class="card person">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>SuJin Lee (PI)</h3>
-              <p>Assistant Professor. Generative AI, Computer Vision, XR.</p>
-              <ul class="tags">
-                <li>PI</li><li>GenAI</li><li>XR</li>
-              </ul>
+        <h2 data-i18n="career_title">Career</h2>
+        <ul class="timeline">
+          <li>
+            <div class="time">2025–현재</div>
+            <div class="desc" data-lang="ko">
+              <strong>조교수</strong>, 세종대학교 인공지능데이터사이언스학과 — 생성형 AI & XR 연구/강의
+              <div class="note">TODO: 역할/성과를 여기에 적으세요.</div>
+            </div>
+            <div class="desc" data-lang="en" hidden>
+              <strong>Assistant Professor</strong>, Sejong University — Generative AI & XR (teaching/research)
+              <div class="note">TODO: Add roles/achievements here.</div>
             </div>
           </li>
-          <li class="card person empty">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>Graduate Student</h3>
-              <p>We’re recruiting MS/PhD students passionate about GenAI & XR.</p>
-              <a class="btn tiny" href="#openings">Apply →</a>
-            </div>
-          </li>
-          <li class="card person empty">
-            <div class="avatar" aria-hidden="true"></div>
-            <div>
-              <h3>Research Assistant</h3>
-              <p>Part‑time/RA positions for XR prototyping with Unity.</p>
-              <a class="btn tiny" href="#openings">Apply →</a>
-            </div>
+          <li>
+            <div class="time">이전</div>
+            <div class="desc" data-lang="ko">산학/연구 경력 — TODO: 상세 경력</div>
+            <div class="desc" data-lang="en" hidden>Industry/Research experience — TODO: details</div>
           </li>
         </ul>
       </div>
     </section>
 
-    <section id="research" class="section">
+    <section id="education" class="section alt">
       <div class="container">
-        <h2>Research Areas</h2>
-        <div class="grid3">
-          <article class="mini">
-            <h3>Text‑to‑3D Pipelines</h3>
-            <p>Score‑distillation with NeRF variants for controllable asset generation and XR scene authoring.</p>
-          </article>
-          <article class="mini">
-            <h3>Emotion‑aware Interaction</h3>
-            <p>Multimodal affect sensing to adapt lighting, motion, and content density in real time.</p>
-          </article>
-          <article class="mini">
-            <h3>Inclusive Creative Tools</h3>
-            <p>Co‑creation workflows for classrooms and diverse users, bridging AI with pedagogy.</p>
-          </article>
-        </div>
+        <h2 data-i18n="edu_title">Education</h2>
+        <ul class="list">
+          <li>
+            <span data-lang="ko"><strong>Ph.D.</strong> 컴퓨터 비전/AI — ○○대학교, 20XX</span>
+            <span data-lang="en" hidden><strong>Ph.D.</strong> Computer Vision/AI — ○○ University, 20XX</span>
+          </li>
+          <li>
+            <span data-lang="ko"><strong>M.S.</strong> 전산학 — ○○대학교, 20XX</span>
+            <span data-lang="en" hidden><strong>M.S.</strong> Computer Science — ○○ University, 20XX</span>
+          </li>
+          <li>
+            <span data-lang="ko"><strong>B.S.</strong> ○○공학 — ○○대학교, 20XX</span>
+            <span data-lang="en" hidden><strong>B.S.</strong> ○○ Engineering — ○○ University, 20XX</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <section id="publications" class="section alt">
+    <section id="publications" class="section">
       <div class="container">
-        <h2>Selected Publications</h2>
+        <h2 data-i18n="pub_title">Publications</h2>
         <div class="filters">
-          <button class="chip active" data-filter="all">All</button>
+          <button class="chip active" data-filter="all" data-i18n="filter_all">All</button>
           <button class="chip" data-filter="genai">GenAI</button>
           <button class="chip" data-filter="xr">XR</button>
           <button class="chip" data-filter="cv">CV</button>
         </div>
         <ol class="pubs" id="pubs">
           <li data-tags="genai xr">
-            <span class="pub-title">Real‑time Text‑to‑3D for Classroom XR: A Generative Pipeline</span>
-            <span class="pub-venue">SIGGRAPH Asia, 2025 (under review)</span>
+            <span class="pub-title" data-lang="ko">실시간 Text-to-3D 파이프라인 — SIGGRAPH Asia, 2025 (under review)</span>
+            <span class="pub-title" data-lang="en" hidden>Real-time Text-to-3D Pipeline — SIGGRAPH Asia, 2025 (under review)</span>
             <span class="pub-authors"><strong>S. Lee</strong>, A. Collaborator, B. Collaborator</span>
             <a href="#" class="pub-link">Preprint</a> · <a href="#" class="pub-link">Code</a>
           </li>
           <li data-tags="xr cv">
-            <span class="pub-title">Emotion‑adaptive XR Scenes via Multimodal Sensing</span>
-            <span class="pub-venue">Digital Creativity, 2024</span>
+            <span class="pub-title" data-lang="ko">감정 적응형 XR 장면 — Digital Creativity, 2024</span>
+            <span class="pub-title" data-lang="en" hidden>Emotion-adaptive XR Scenes — Digital Creativity, 2024</span>
             <span class="pub-authors"><strong>S. Lee</strong>, C. Collaborator</span>
             <a href="#" class="pub-link">DOI</a> · <a href="#" class="pub-link">Project</a>
           </li>
-          <li data-tags="genai cv">
-            <span class="pub-title">StyleGAN‑based Interactive Media for Cultural Heritage</span>
-            <span class="pub-venue">Journal of Imaging, 2023</span>
-            <span class="pub-authors"><strong>S. Lee</strong>, D. Collaborator</span>
-            <a href="#" class="pub-link">PDF</a> · <a href="#" class="pub-link">Dataset</a>
-          </li>
         </ol>
+        <p class="note" data-lang="ko">TODO: 항목을 자유롭게 추가/삭제하세요.</p>
+        <p class="note" data-lang="en" hidden>TODO: Add/remove items as needed.</p>
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section alt">
       <div class="container">
-        <h2>Projects</h2>
+        <h2 data-i18n="proj_title">Projects</h2>
         <div class="grid3">
           <article class="project">
-            <h3>XRGen Studio</h3>
-            <p>Rapid XR authoring toolkit combining text‑to‑3D with motion control and Unity integration.</p>
+            <h3 data-lang="ko">XRGen Studio</h3>
+            <h3 data-lang="en" hidden>XRGen Studio</h3>
+            <p data-lang="ko">Text-to-3D + 모션 컨트롤로 XR 장면을 빠르게 제작</p>
+            <p data-lang="en" hidden>Fast XR scene authoring with text-to-3D + motion control</p>
             <ul class="tags"><li>GenAI</li><li>Unity</li><li>NeRF</li></ul>
             <a class="btn tiny" href="#">Demo</a>
           </article>
           <article class="project">
-            <h3>Sign2Text</h3>
-            <p>Sign‑language to Korean/English translation via CV + LLM fusion for accessibility.</p>
+            <h3 data-lang="ko">Sign2Text</h3>
+            <h3 data-lang="en" hidden>Sign2Text</h3>
+            <p data-lang="ko">수어 → 자연어 번역 (CV + LLM)</p>
+            <p data-lang="en" hidden>Sign language → natural language (CV + LLM)</p>
             <ul class="tags"><li>CV</li><li>NLP</li><li>Accessibility</li></ul>
             <a class="btn tiny" href="#">Paper</a>
           </article>
           <article class="project">
-            <h3>XR Classroom</h3>
-            <p>Teacher‑centered authoring tool enabling AI‑assisted lesson design.</p>
+            <h3 data-lang="ko">XR Classroom</h3>
+            <h3 data-lang="en" hidden>XR Classroom</h3>
+            <p data-lang="ko">교사용 AI 보조 수업 설계 도구</p>
+            <p data-lang="en" hidden>AI-assisted lesson design tool for teachers</p>
             <ul class="tags"><li>XR</li><li>EdTech</li><li>HCI</li></ul>
             <a class="btn tiny" href="#">Case Study</a>
           </article>
@@ -198,78 +167,37 @@ My research currently focuses on an interdisciplinary project between art and ar
       </div>
     </section>
 
-    <section id="teaching" class="section alt">
+    <section id="activity" class="section">
       <div class="container">
-        <h2>Teaching</h2>
-        <ul class="cards">
-          <li class="card">
-            <h3>AR/VR/MR (Undergrad)</h3>
-            <p>3–4주 이론 후 Unity 실습. 팀 프로젝트로 배포 가능한 XR 콘텐츠 제작.</p>
-            <a href="#" class="chip">Syllabus</a>
-          </li>
-          <li class="card">
-            <h3>Generative AI & Image Engineering</h3>
-            <p>고전 비전 → 확산모델까지. Python + Unity 파이프라인 실습.</p>
-            <a href="#" class="chip">Lecture Notes</a>
-          </li>
-          <li class="card">
-            <h3>Computer Vision</h3>
-            <p>Detection, segmentation, 3D reconstruction.</p>
-            <a href="#" class="chip">Assignments</a>
-          </li>
+        <h2 data-i18n="act_title">Activity</h2>
+        <ul class="list">
+          <li data-lang="ko">학회/조직 활동 — 예: SIGGRAPH Asia 프로그램 위원 (TODO)</li>
+          <li data-lang="en" hidden>Academic/professional services — e.g., SIGGRAPH Asia program committee (TODO)</li>
+          <li data-lang="ko">강연/튜토리얼/워크숍 — (TODO)</li>
+          <li data-lang="en" hidden>Talks/Tutorials/Workshops — (TODO)</li>
         </ul>
       </div>
     </section>
 
-    <section id="news" class="section">
-      <div class="container">
-        <h2>News</h2>
-        <ul class="list" id="news-list">
-          <li><strong>[2025-08]</strong> HCAI·XR Lab 웹사이트 오픈 🎉</li>
-          <li><strong>[2025-07]</strong> SIGGRAPH Asia 2025 논문 1편 투고</li>
-          <li><strong>[2025-06]</strong> 산학협력 프로젝트 ‘XRGen Studio’ 착수</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="openings" class="section alt">
+    <section id="contact" class="section alt">
       <div class="container two-col">
         <div>
-          <h2>Openings</h2>
-          <p>열정적인 <strong>MS/PhD/RA/학부 연구생</strong>을 상시 모집합니다.</p>
-          <ul class="list">
-            <li>필수: Python, 딥러닝 프레임워크(PyTorch/TF) 중 1개</li>
-            <li>가산점: Unity/Unreal, 3D Vision, Diffusion/NeRF</li>
-            <li>메일 제목: <em>[HCAIXR 지원] 이름 – 지원 포지션</em></li>
-            <li>첨부: CV, 포트폴리오/깃허브, 성적표(선택)</li>
-          </ul>
-        </div>
-        <aside class="card">
-          <h3>How to Apply</h3>
-          <p>이메일: <a href="mailto:hello@example.com">hello@example.com</a></p>
-          <a class="btn" href="mailto:hello@example.com?subject=%5BHCAIXR%20%EC%A7%80%EC%9B%90%5D%20%EC%9D%B4%EB%A6%84%20%E2%80%94%20%ED%8F%AC%EC%A7%80%EC%85%98">이메일 보내기</a>
-        </aside>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container two-col">
-        <div>
-          <h2>Contact</h2>
+          <h2 data-i18n="contact_title">Contact</h2>
           <ul class="kv">
-            <li><span>Email</span><strong><a href="mailto:hello@example.com">hello@example.com</a></strong></li>
+            <li><span data-i18n="label_email">Email</span><strong><a href="mailto:hello@example.com">hello@example.com</a></strong></li>
             <li><span>GitHub</span><strong><a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a></strong></li>
-            <li><span>Location</span><strong>Seoul, KR</strong></li>
+            <li><span data-i18n="label_location">Location</span><strong>Seoul, KR</strong></li>
           </ul>
         </div>
         <form class="card" name="contact" method="post" data-netlify="true">
-          <h3>Send a message</h3>
+          <h3 data-i18n="contact_form">Send a message</h3>
           <input type="hidden" name="form-name" value="contact" />
-          <label>이름<input name="name" required /></label>
-          <label>이메일<input type="email" name="email" required /></label>
-          <label>메시지<textarea name="message" rows="4" required></textarea></label>
-          <button class="btn" type="submit">Send</button>
-          <p class="form-note">Netlify 배포 시 폼이 작동합니다.</p>
+          <label data-i18n="form_name_label">이름<input name="name" required /></label>
+          <label data-i18n="form_email_label">이메일<input type="email" name="email" required /></label>
+          <label data-i18n="form_msg_label">메시지<textarea name="message" rows="4" required></textarea></label>
+          <button class="btn" type="submit" data-i18n="form_send">Send</button>
+          <p class="form-note" data-lang="ko">Netlify 배포 시 폼이 작동합니다.</p>
+          <p class="form-note" data-lang="en" hidden>The form works when deployed on Netlify.</p>
         </form>
       </div>
     </section>
@@ -277,7 +205,7 @@ My research currently focuses on an interdisciplinary project between art and ar
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> HCAI·XR Lab — SuJin Lee</p>
+      <p>© <span id="year"></span> SuJin Lee — Profile</p>
       <p class="tiny">Built with ❤️ on GitHub Pages</p>
     </div>
   </footer>

@@ -1,4 +1,6 @@
-# HCAI·XR Lab Website (GitHub Pages)
-1) 이 폴더를 새 저장소 **`<아이디>.github.io`** 에 업로드
-2) 저장소 **Settings → Pages**: Source=Deploy from a branch, Branch=`main` `/ (root)` → Save
-3) `https://<아이디>.github.io`에서 확인
+# Bilingual Profile Site (KR/EN)
+- 섹션: Intro, Career, Education, Publications, Projects, Activity, Contact
+- 한국어/영어 전환: 상단 우측 버튼 → `data-lang` 속성 기반으로 표시 전환
+- 편집: `index.html`의 TODO/텍스트를 본인 정보로 교체
+- 색상: `style.css`의 `--brand`, `--brand-2` 변경
+- 배포: GitHub Pages (Settings → Pages → Deploy from a branch)
