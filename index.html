@@ -1,57 +1,348 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <title>SuJin Lee - Bilingual Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SuJin Lee — Profile</title>
+  <meta name="description" content="SuJin Lee | Career, Education, Publications, Projects, Activities" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1 id="name">SuJin Lee</h1>
-        <div class="lang-switch">
-            <button onclick="setLanguage('en')">English</button>
-            <button onclick="setLanguage('ko')">한국어</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">Human-Centered<span>AI</span></a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+        <ul id="nav-menu">
+          <li><a href="#intro" data-i18n="nav_intro">Intro</a></li>
+          <li><a href="#career" data-i18n="nav_career">Career</a></li>
+          <li><a href="#education" data-i18n="nav_education">Education</a></li>
+          <li><a href="#publications" data-i18n="nav_publications">Publications</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="#activity" data-i18n="nav_activity">Activity</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <button id="lang-ko" class="chip" aria-pressed="true">한국어</button>
+        <button id="lang-en" class="chip" aria-pressed="false">EN</button>
+        <button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <section id="intro" class="hero" role="region" aria-label="Intro">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 data-i18n="intro_title">Generative AI · XR</h1>
+        <p class="kicker" data-i18n="intro_subtitle">Researcher & Educator</p>
+        <p class="mt" data-lang="ko">
+          생성형 인공지능과 컴퓨터 비전을 기반으로 XR(AR/VR/MR) 콘텐츠 생성·인터랙션·교육 응용을 연구합니다.
+        </p>
+        <p class="mt" data-lang="en" hidden>
+          I focus on generative AI and computer vision for XR (AR/VR/MR) content generation, interaction, and education.      
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects" data-i18n="cta_projects">See Projects</a>
+          <a class="btn ghost" href="#publications" data-i18n="cta_publications">Read Publications</a>
         </div>
-    </header>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <div class="orb"></div>
+        <div class="orb small"></div>
+        <div class="mesh">AI • XR • CV</div>
+      </div>
+    </div>
+  </section>
 
-    <section id="about" data-en="Assistant Professor, Department of AI & Data Science, Sejong University" 
-                           data-ko="세종대학교 인공지능데이터사이언스학과 조교수">
-        Assistant Professor, Department of AI & Data Science, Sejong University
-    </section>
-
-    <section>
-        <h2 data-en="Career & Positions" data-ko="경력">Career & Positions</h2>
-        <ul>
-            <li data-en="Assistant Professor, Sejong University" data-ko="세종대학교 조교수"></li>
-            <li data-en="Research Professor, Chung-Ang University (2020-2021)" data-ko="중앙대학교 연구교수 (2020-2021)"></li>
-            <li data-en="Adjunct Professor, Chung-Ang University (2019)" data-ko="중앙대학교 겸임교수 (2019)"></li>
+  <main id="main">
+    <!-- Career -->
+    <section id="career" class="section">
+      <div class="container">
+        <h2>Career</h2>
+        <ul class="timeline">
+          <li>
+            <div class="time">present</div>
+            <div class="desc" data-lang="en"><strong>Assistant Professor</strong>, Sejong University</div>
+            <div class="desc" data-lang="ko" hidden><strong>조교수</strong>, 세종대학교</div>
+          </li>
+          <li>
+            <div class="time">2020–2021</div>
+            <div class="desc" data-lang="en"><strong>Research Professor</strong>, Chung-Ang University</div>
+            <div class="desc" data-lang="ko" hidden><strong>연구교수</strong>, 중앙대학교</div>
+          </li>
+          <li>
+            <div class="time">2019</div>
+            <div class="desc" data-lang="en"><strong>Adjunct Professor</strong>, Chung-Ang University</div>
+            <div class="desc" data-lang="ko" hidden><strong>겸임교수</strong>, 중앙대학교</div>
+          </li>
+          <li>
+            <div class="time">2018–2020</div>
+            <div class="desc" data-lang="en"><strong>Collaborator</strong>, Artificial Intelligence Research Institute (AIRI)</div>
+            <div class="desc" data-lang="ko" hidden><strong>협업연구원</strong>, 인공지능연구원(AIRI)</div>
+          </li>
+          <li>
+            <div class="time">Peer Review</div>
+            <div class="desc" data-lang="en">Peer Reviewer (journals & conferences)</div>
+            <div class="desc" data-lang="ko" hidden>논문심사(학술지·학회)</div>
+          </li>
         </ul>
+      </div>
     </section>
 
-    <section>
-        <h2 data-en="Education" data-ko="학력">Education</h2>
-        <ul>
-            <li data-en="Ph.D. in Media Technology, Sogang University (2013)" data-ko="서강대학교 미디어공학과 박사 (2013)"></li>
-            <li data-en="M.S. in Media Technology, Sogang University (2007)" data-ko="서강대학교 미디어공학과 석사 (2007)"></li>
-            <li data-en="M.D.A. in Design, Ewha Womans University (2003)" data-ko="이화여자대학교 디자인학과 석사 (2003)"></li>
-            <li data-en="B.S. in Animal Science, Korea University (1996)" data-ko="고려대학교 응용동물과학과 학사 (1996)"></li>
+    <!-- Education -->
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2>Education</h2>
+        <ul class="list">
+          <li>
+            <span data-lang="en"><strong>Ph.D.</strong> Media Technology — Sogang University, 2013</span>
+            <span data-lang="ko" hidden><strong>박사</strong> 미디어공학 — 서강대학교, 2013</span>
+          </li>
+          <li>
+            <span data-lang="en"><strong>M.S.</strong> Media Technology — Sogang University, 2007</span>
+            <span data-lang="ko" hidden><strong>석사</strong> 미디어공학 — 서강대학교, 2007</span>
+          </li>
+          <li>
+            <span data-lang="en"><strong>M.D.A.</strong> Design(Photohraphy) — Ewha Womans University, 2003</span>
+            <span data-lang="ko" hidden><strong>석사</strong> 디자인(사진) — 이화여자대학교, 2003</span>
+          </li>
+          <li>
+            <span data-lang="en"><strong>B.S.</strong> Animal Sciences — Korea University, 1996</span>
+            <span data-lang="ko" hidden><strong>학사</strong> 응용동물과학 — 고려대학교, 1996</span>
+          </li>
         </ul>
+      </div>
     </section>
 
-    <section>
-        <h2 data-en="Academic Service" data-ko="학술 활동">Academic Service</h2>
-        <ul>
-            <li data-en="Reviewer, Samsung HumanTech Paper Award (29th, 30th)" data-ko="제29, 30회 삼성휴먼테크대상 논문심사위원"></li>
-            <li data-en="Mentor, Samsung Software Academy for Youth (SSAFY)" data-ko="삼성청년SW아카데미(SSAFY) 멘토"></li>
-            <li data-en="Reviewer, Jahr - European Journal of Bioethics (Scopus)" data-ko="Jahr - European Journal of Bioethics(Scopus) 논문 심사위원"></li>
-            <li data-en="Reviewer, Korea Convergence Society" data-ko="한국융합학회 논문심사위원"></li>
-            <li data-en="Reviewer, AI & Humanities Research" data-ko="인공지능인문학연구 논문심사위원"></li>
-            <li data-en="Committee, HCI Korea 2025" data-ko="HCI KOREA 2025 위원"></li>
-            <li data-en="Committee, ISEA 2025 International Programme Committee" data-ko="ISEA 2025 국제 프로그램 위원회"></li>
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <div class="container">
+        <h2>Publications</h2>
+        <h3>SCIE</h3>
+        <ol class="pubs">
+         <li>User Experience in Mobile Metaverses: Nonverbal Communication by Avatars in ZEPETO, PRESENCE: VIRTUAL AND AUGMENTED REALITY, 2025</li>
+         <li>Enhanced Data Processing and Machine Learning Techniques for Energy Consumption Forecasting, Electronics, 2024</li>
+         <li>Fifth generation district heating and cooling: A comprehensive survey, Energy Reports, 2024</li>
+         <li>eXplainable AI (XAI)-Based Input Variable Selection Methodology for Forecasting Energy Consumption, Electronics, 2022</li> 
+          <li>Daily and seasonal heat usage patterns analysis in heat networks, <em>Scientific Reports</em>, 2022 [IF: 4.379, Q1]</li>
+          <li>Pixel-level tunnel crack segmentation using a weakly supervised annotation approach, <em>Computers in Industry</em>, 2021 [IF: 7.635, Q1]</li>
+          <li>Multiple Object Tracking in Deep Learning Approaches: A Survey, <em>Electronics</em>, 2021 [IF: 2.408, Q2]</li>
+          <li>Tampered and Computer-Generated Face Images Identification Based on Deep Learning, <em>Applied Sciences</em>, 2020 [IF: 2.679, Q2]</li>
+          <li>Deep Learning based Computer Generated Face Identification using Convolutional Neural Network, <em>Applied Sciences</em>, 2018 [IF: 2.679, Q2]</li>
+        </ol>
+
+        <h3>Conference</h3>
+        <ol class="pubs">
+          <li>SF3D 모델 기반의 실시간 3D 생성 콘텐츠 기술개발 연구, 한국 콘텐츠 하계 학술대회, 2025</li>
+          <li>생성형 인공지능 기반의 이미지 생성을 위한 효과적인 프롬프트 작성 연구, 한국 콘텐츠 추계 학술대회, 2023</li>
+          <li>설명 가능한 인공지능 매개 에너지 수요 예측 및 효율성 연구, 한국 방송 미디어공학회 춘계 학술대회,  2022 </li>
+          <li>빅데이터 기반 열공급망의 이상탐지를 위한 기계학습 방법론 연구, 한국차세대컴퓨팅학회 춘계 학술대회, 2022</li>
+          <li>어텐션 메커니즘을 활용한 딥러닝 기반의 번호판 검출 및 인식, 한국차세대컴퓨팅학회 춘계 학술대회, 2022</li>
+          <li>Image Compression with Recurrent Neural Network and Generalized Divisive Normalization, <em>CVPR</em>, 2021</li>
+          <li>딥인코더-디코더 기반의 인공지능 포토 스토리텔러, 정보처리학회학술대회 우수논문, 2019</li>
+          <li>비전공자 대상 컴퓨터 프로그래밍 교육 패러다임 연구, 컴퓨터교육학회학술대회, 2017</li>
+        </ol>
+
+        <h3>KCI</h3>
+        <ol class="pubs">
+          <li>독거노인의 반려 로봇을 통한 돌봄 경험에 관한 언어 네트워크 분석: 구로와 태백의 ‘효돌’ 사용자 비교, 헬스커뮤니케이션학회, 2025</li>
+          <li>OpenAI API와 인간의 창의성 기반 게임 설계 방법론 연구, 차세대융합기술학회, 2024</li>
+          <li>미술교육 학습 도구로서 활용을 위한 생성형AI 서비스 분석, 차세대컨버전스정보서비스학회, 2024</li>
+          <li>‘미디어 아트X 세운상가’ 전시를 통해 탐구하는 예술과 기술의 상호작용 연구, 차세대융합기술학회, 2023</li>
+          <li>인공지능 생성 기술 기반의 웹툰 생태계 패러다임 전환 연구, 융복합지식학회, 2023</li>
+          <li>가상현실(VR)을 활용한 역사콘텐츠 개발과 의미 — 조선시대 과거제도를 중심으로, 한국문화융합학회, 2021</li>
+          <li>COVID-19 시대의 SW 교육에 관한 고찰 — 컴퓨팅 사고력과 ICT을 중심으로, 디지털콘텐츠학회, 2021</li>
+          <li>보편적 빅데이터와 빅데이터 교육의 방향성 연구 — 빅데이터 전문가의 인식 조사를 기반으로, 정보교육학회, 2020</li>
+          <li>딥인코더-디코더 기반의 인공지능 포토 스토리텔러, 정보처리학회학술대회 우수논문, 2019</li>
+          <li>엑셀을 이용한 SW 비전공자 대상 컴퓨팅 교육 모형 설계 및 효과 분석, 디지털콘텐츠학회, 2019</li>
+          <li>컴퓨팅 사고를 기반으로 한 융복합 사고 수업 디자인 연구, 과학예술포럼, 2018</li>
+          <li>웨어러블 컴퓨팅 디바이스를 이용한 시각 디자인 구현 및 연구, 과학예술포럼, 2018</li>
+          <li>데이터시각화의 다양성 연구 — 예술작품에 드러난 데이터 시각화, 디지털디자인학연구, 2014</li>
+          <li>휴대전화 전자파를 이용한 뉴미디어아트 연구, 과학예술포럼, 2014</li>
+          <li>기술 발달에 따른 디지털사진의 이해 — 아날로그 사진해석과 비교분석, 디지털디자인학연구, 2014</li>
+          <li>컴퓨터와 인간 상호작용을 이용한 예술작품 고찰 — 무브먼트 작품을 중심으로, 과학예술포럼, 2013</li>
+        </ol>
+
+        <h3>Books</h3>
+        <ol class="pubs">
+          <li>인공지능 생성 모델 예술, 아트코리아랩 총서(인공지능편), 커뮤니케이션북스, 2024</li>
+          <li>예술가의 메타버스 사용법, 아트코리아랩 총서(메타버스편), 커뮤니케이션북스, 2023</li>
+          <li>인공지능 예술가와 창작 활동, 디지털 배움터 (심화), 스톰 미디어, 2022</li>
+          <li>뉴미디어아티스트, 기술을 활용한 예술가들, 커뮤니케이션북스, 2016</li>
+        </ol>
+
+        <h3>Dissertation</h3>
+        <ol class="pubs">
+          <li>인터랙티브 크로노모포시스: 3D 다중노출기술을 이용한 모션 표현, 2013 (박사학위논문)</li>
+          <li>시공간의 입체 공간적 표현 — 멀티 레이어 구조 기반, 2007 (석사학위논문)</li>
+          <li>사진으로 표상된 도시 공간, 2003 (석사학위논문)</li>
+          <li>소 동결 정자 운동성 연구, 1996 (학사학위논문)</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2>Projects</h2>
+        <h3>Grants & Programs</h3>
+        <ul class="list">
+          <li>세 개의 눈으로 보는 AI 기자 사용법, 방송문화진흥회 저술 지원 사업, 2025</li>
+          <li>한국사회에서의 AI에 대한 학제적 연구: 한국학 영역의 확장을 향하여, 한국학중앙연구원 과제, 2025</li>
+          <li>SW 중심대학 사업(가치 확산 파트 부책임), 정보통신기획평가원, 2024~</li>
+          <li>메타버스 융합대학원 사업, 정보통신기획평가원, 2024~</li>
+          <li>열공급망 수용가 빅데이터 기반 에너지관리 기술 개발 및 실증 — 한국에너지기술평가원, 2021–2024</li>
+          <li>정조의 효심이 깃든 용양봉저정과 정조 능행차 VR 콘텐츠 제작 — 한국출판문화진흥원, 2021–2022</li>
+          <li>CGAN을 이용한 새로운 자기 이미지 표현연구, 세종대학교, 2021-2022</li>          
+          <li>New Style Mirror Image Using Generative Adversarial Network — 한국연구재단(중앙대학교), 2020</li>
+          <li>인공지능기술시대의 예술세계 분석 및 패러다임 구축 — 한국연구재단, 2019–2021</li>
+          <li>대학생의 AI 리터러시 교양교육 프로그램 개발 — 소프트웨어정책연구소, 2020</li>
+          <li>조선시대 직업 체험 교육 VR 콘텐츠 개발 — 한국연구재단(중앙대학교), 2020</li>
+          <li>웨어러블 디바이스를 이용한 디자인 구현 및 연구 — 한국연구재단, 2015–2016</li>
+          <li>을지로삼각공원 영상가로등 콘텐츠 제작 — 스트리트웍스(주), 2009</li>
+          <li>인천도시계획관 아이템 제작 — 지엘 어소시에이츠(주), 2009</li>
+          <li>디지털특수효과기술 연구 — 한국문화콘텐츠진흥원, 2007–2009</li>
+          <li>삼차원 환경 모델링 및 물체 인식 — 성균관대학교, 2005–2006</li>
+          <li>고밀도 얼굴표정 데이터의 미학적 렌더링 및 리타겟팅 — 한국과학재단, 2005</li>
+          <li>2022년 인공지능 연계 콘텐츠 창작자 양성사업 — (주)뉴작, 2022</li>
+          <li>복합 도메인의 에너지 수요 빅데이터 기반 XAI 진단/분석 프레임워크 — 정보통신기획평가원, 2022–2024</li>
+          <li>무·오이·호박 표현체 육종 예측모델 — 농림식품기술기획평가원, 2022–2024</li>
+<!--         </ul>
+
+        <h3>Institutions (by year)</h3>
+        <ul class="kv">
+          <li><span>KETEP</span><strong>2021–2024</strong></li>
+          <li><span>KPIPA</span><strong>2021</strong></li>
+          <li><span>NRF</span><strong>2015–2021</strong></li>
+          <li><span>KOCCA</span><strong>2007–2009</strong></li>
+          <li><span>KOFAC</span><strong>2005–2006</strong></li>
+        </ul> -->
+      </div>
+    </section>
+
+    <!-- Activity -->
+    <section id="activity" class="section">
+      <div class="container">
+        <h2>Activity</h2>
+        <h3>Lecturer</h3>
+        <ul class="list">
+          <li>Seoul National University of Science & Technology, 2013</li>
+          <li>Chonnam National University, 2014</li>
+          <li>Hanbat National University, 2015</li>
+          <li>Korea National University of Transportation, 2015</li>
+          <li>Chung-Ang University, 2016–2021</li>
+          <li>Sejong University, 2018</li>
         </ul>
+
+        <h3>Special Lectures / Media</h3>
+        <ul class="list">
+          <li>2023충청권 인공지능 주간 특강, 대전, 2023</li>
+          <li>2023사이언스 슬램 D 세종과학예술영재학교, 대전, 2023</li>
+          <li>인공지능 시대의 기술과 예술 특강, 인천재능대학교, 2022</li>
+          <li>인공지능윤리협회 인공지능 윤리대전, 대전, 2021</li>
+          <li>ETRI 아카데미 전략과정, 대전, 2020</li>
+          <li>제 6회 세계 인문학 포럼, 경주, 2020</li>
+          <li>AI Festival, 대전, 2019-2021</li>
+          <li>2nd 함께하는 딥러닝 컨퍼런스(2nd DLCAT), 대전, 2019</li>
+          <li>ART x AI/ Robotics 융복합 세미나, NMARA, 서울, 2019</li>
+       
+         
+        </ul>
+
+        <h3>Media</h3>
+        <ul class="list">
+          <li>[Wbridge] 2023.07.26
+전문가 칼럼 인간을 읽는 OTT 인공지능 서비스
+https://www.wbridge.or.kr/platform/careersport/info/selectTrendDetail.do?ntt_sn=461
+</li>
+          <li>[매경 TV] 2022.01.14
+메타버스 위드 인공지능 컨퍼런스 4편 https://www.youtube.com/watch?v=bPT-gbENn28
+3</li>
+          <li>[Another View_공간정보 32호, LX한국국토정보공사 공간정보연구원, 가을호 2021]
+Artificial Intelligence technique, style transfer, A.I. Atelier makes art. 
+</li>
+          <li>[국립세종도서관 발간, 자료 정책과 도서관] 6,7월호 2021
+예술과 기술, 인간의 상상이 만나 열리는 또 다른 세상
+https://sejong.nl.go.kr/webzine/ecatalog5.jsp?Dir=77
+1</li>
+          <li>[YTN 사이언스] '사이언스 포럼' 2021.07.10 
+인공지능 기술과 예술의 관계
+https://science.ytn.co.kr/program/program_view.php?s_mcd=0085&s_hcd=&key=202107121315381346&page=1
+</li>
+          <li>[A Times] 'AI로 만드는 컬처' 2020.11.05
+②A.I. Atelier, 고흐 화풍으로 지금의 파리를 재현하다 
+http://www.aitimes.com/news/articleView.html?idxno=133561
+</li>
+          <li>[IT 조선] 'AI ART 예술의 의미를 묻다' ⑤이수진 교수 "AI 기술 시대의 예술 작품" 20191109
+http://it.chosun.com/site/data/html_dir/2019/11/08/2019110803676.html
+</li>
+          <li>[한겨례신문, 채널A뉴스, IT조선, 스포츠경향] 2018-2019
+http://www.hani.co.kr/arti/science/future/877225.html
+https://www.youtube.com/watch?v=He6wmb0clQM
+http://it.chosun.com/site/data/html_dir/2018/12/29/2018122900644.html
+http://m.sports.khan.co.kr/view.html?art_id=201812311505003&sec_id=561101#c2b
+</li>
+          <li>[YTN 라디오] ‘뉴스 익는 밤, 조현지입니다’ 2017.12.21
+https://radio.ytn.co.kr/_comm/fm_hear_etc.php?key=201712212117138822&mcd=0373
+</li>
+          <li>[YTN 사이언스] ‘데이터 시각화의 세계’ 2014.04.25
+https://science.ytn.co.kr/program/program_view.php?s_mcd=0013&s_hcd&key=201404251508345958
+4</li>
+       
+        </ul>
+
+        <h3>Academic Service</h3>
+        <ul class="list">
+          <li>제29, 30회 삼성휴먼테크대상 논문심사위원</li>
+          <li>삼성청년SW아카데미(SSAFY) 멘토</li>
+          <li>Jahr - European Journal of Bioethics(Scopus), 논문 심사 위원</li>
+          <li>한국융합학회 논문심사위원</li>
+          <li>E인공지능인문학연구 논문심사위원</li>
+          <li>제 6회 세계 인문학 포럼, 경주, 2020</li>
+          <li>HCI KOREA 2025 Committee</li>
+          <li>ISEA 2025 the International Programme Committee(IPC)</li>
+                
+        </ul>
+        
+      </div>
     </section>
 
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container two-col">
+        <div>
+          <h2>Contact</h2>
+          <ul class="kv">
+            <li><span>Email</span><strong><a href="mailto:genegraphy@gmail.com">genegraphy@gmail.com</a></strong></li>
+            <li><span>GitHub</span><strong><a href="https://github.com/genegraphy" target="_blank" rel="noopener">github.com/genegraphy</a></strong></li>
+            <li><span>Location</span><strong>Seoul, KR</strong></li>
+          </ul>
+        </div>
+        <form class="card" name="contact" method="post" data-netlify="true">
+          <h3>Send a message</h3>
+          <input type="hidden" name="form-name" value="contact" />
+          <label>이름<input name="name" required /></label>
+          <label>이메일<input type="email" name="email" required /></label>
+          <label>메시지<textarea name="message" rows="4" required></textarea></label>
+          <button class="btn" type="submit">Send</button>
+          <p class="form-note" data-lang="ko">Netlify 배포 시 폼이 작동합니다.</p>
+          <p class="form-note" data-lang="en" hidden>The form works when deployed on Netlify.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> SuJin Lee — Profile</p>
+      <p class="tiny">Built with ❤️ on GitHub Pages</p>
+    </div>
+  </footer>
 </body>
 </html>
