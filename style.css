@@ -62,3 +62,11 @@ p{margin:0 0 16px}.kicker{color:var(--muted);margin-top:-6px}.mt{margin-top:8px}
 :root.light .epigraph { background: #fff; }
 .epigraph p { margin: 0 0 6px; font-size: clamp(16px, 2.2vw, 18px); }
 .epigraph cite { display: block; color: var(--muted); font-style: normal; font-size: 14px; }
+
+.pastel-email {
+  color: #AEC6CF;
+  text-decoration: none;
+}
+.pastel-email:hover {
+  text-decoration: underline;
+}
