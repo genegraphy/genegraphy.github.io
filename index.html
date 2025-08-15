@@ -541,7 +541,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section alt">
+<!--     <section id="contact" class="section alt">
       <div class="container two-col">
         <div>
           <h2>Contact</h2>
@@ -589,6 +589,56 @@
       <p>© <span id="year"></span> SuJin Lee — Profile</p>
       <p class="tiny">by genegraphy</p>
     </div>
-  </footer>
+  </footer> -->
+
+    <section id="contact" class="section alt">
+  <div class="container two-col">
+    <div>
+      <h2>Contact</h2>
+      <ul class="kv">
+        <li><span>Email</span><strong><a href="mailto:genegraphy@gmail.com">genegraphy@gmail.com</a></strong></li>
+        <li><span>GitHub</span><strong><a href="https://github.com/genegraphy" target="_blank" rel="noopener">github.com/genegraphy</a></strong></li>
+        <li><span>Location</span><strong>Seoul, KR</strong></li>
+      </ul>
+    </div>
+
+    <form class="contact-form card" name="contact" method="post" data-netlify="true">
+      <h3 data-lang="en">Send a message</h3>
+      <h3 data-lang="ko" hidden>메시지 보내기</h3>
+
+      <input type="hidden" name="form-name" value="contact" />
+
+      <label class="form-field">
+        <span data-lang="ko">이름</span>
+        <span data-lang="en" hidden>Name</span>
+        <input name="name" required placeholder="홍길동">
+      </label>
+
+      <label class="form-field">
+        <span data-lang="ko">이메일</span>
+        <span data-lang="en" hidden>Email</span>
+        <input type="email" name="email" required placeholder="example@email.com">
+      </label>
+
+      <label class="form-field">
+        <span data-lang="ko">메시지</span>
+        <span data-lang="en" hidden>Message</span>
+        <textarea name="message" rows="5" required placeholder="내용을 입력하세요"></textarea>
+      </label>
+
+      <div class="form-actions">
+        <button class="btn" type="submit" data-lang="en">Send</button>
+        <button class="btn" type="submit" data-lang="ko" hidden>보내기</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> SuJin Lee — Profile</p>
+    <p class="tiny">by genegraphy</p>
+  </div>
+</footer>
 </body>
 </html>
