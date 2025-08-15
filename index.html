@@ -600,7 +600,7 @@
         <li><span>GitHub</span><strong><a href="https://github.com/genegraphy" target="_blank" rel="noopener">github.com/genegraphy</a></strong></li>
         <li><span>Location</span><strong>Seoul, KR</strong></li>
       </ul>
-    </div>
+<!--     </div>
 
     <form class="contact-form card" name="contact" method="post" data-netlify="true">
       <h3 data-lang="en">Send a message</h3>
@@ -638,7 +638,50 @@
   <div class="container">
     <p>© <span id="year"></span> SuJin Lee — Profile</p>
     <p class="tiny">by genegraphy</p>
+  </div> -->
+
+
+    <!-- Comments -->
+<div id="comments" class="card comments">
+  <h3 data-lang="en">Leave a comment</h3>
+  <h3 data-lang="ko" hidden>댓글 남기기</h3>
+
+  <div class="comment-form">
+    <label class="form-field">
+      <span data-lang="en">Name</span>
+      <span data-lang="ko" hidden>이름</span>
+      <input id="c-name" placeholder="" autocomplete="name" />
+    </label>
+
+    <label class="form-field">
+      <span data-lang="en">Comment</span>
+      <span data-lang="ko" hidden>댓글</span>
+      <textarea id="c-text" rows="4" placeholder=""></textarea>
+    </label>
+
+    <div class="form-actions">
+      <button id="c-submit" class="btn" data-lang="en">Post</button>
+      <button id="c-submit-ko" class="btn" data-lang="ko" hidden>등록</button>
+    </div>
+
+    <p class="tiny note" data-lang="en">
+      Saved only in your browser (local device). Clearing site data will remove comments.
+    </p>
+    <p class="tiny note" data-lang="ko" hidden>
+      이 댓글은 브라우저(내 기기)에만 저장됩니다. 사이트 데이터 삭제 시 사라집니다.
+    </p>
   </div>
+
+  <hr class="sep" />
+
+  <h4 class="mt8" data-lang="en">Comments</h4>
+  <h4 class="mt8" data-lang="ko" hidden>댓글 목록</h4>
+  <ul id="c-list" class="c-list"></ul>
+</div>  
+
+
+
+      
 </footer>
 </body>
 </html>
