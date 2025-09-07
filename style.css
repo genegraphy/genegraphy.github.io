@@ -4,7 +4,7 @@
 :root.light{--bg:#ffffff;--fg:#0f172a;--muted:#475569;--card:#f1f5f9;--alt:#f8fafc;--brand:#0369a1;--brand-2:#2563eb;--ring:rgba(37,99,235,.25);--shadow:rgba(2,6,23,.08)}
 .container{max-width:1120px;margin:0 auto;padding:0 20px}
 .section{padding:80px 0}.section.alt{background:var(--alt)}
-h1,h2,h3{line-height:1.2;margin:0 0 12px}h1{font-size:clamp(28px,5vw,44px)}h2{font-size:clamp(22px,4vw,32px)}h3{font-size:clamp(18px,3vw,22px)}
+h1,h2,h3{line-height:1.2;margin:0 0 12px}h1{font-size:clamp(28px,5vw,36px)}h2{font-size:clamp(22px,4vw,32px)}h3{font-size:clamp(18px,3vw,22px)}
 p{margin:0 0 16px}.kicker{color:var(--muted);margin-top:-6px}.mt{margin-top:8px}
 .site-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(0,0,0,.4),transparent);backdrop-filter:saturate(140%) blur(10px)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
