@@ -198,7 +198,9 @@ body{font-size:17px;word-break:keep-all;overflow-wrap:break-word;text-wrap:prett
 .hero-grid{display:flex;justify-content:space-between;align-items:center;gap:48px;}
 .hero-left{flex:1 1 auto;min-width:0;}
 .hero-right{flex:0 0 auto;}
-.hero-title{font-family:var(--disp);font-weight:800;font-size:clamp(32px,4.6vw,52px);line-height:1.08;letter-spacing:-.01em;margin:14px 0 12px;}
+.hero-title{font-family:var(--disp);font-weight:800;font-size:clamp(24px,4vw,44px);line-height:1.1;letter-spacing:-.02em;margin:14px 0 12px;white-space:nowrap;}
+body.en .hero-title{font-size:clamp(16px,2.05vw,26px);}
+@media(max-width:680px){.hero-title,body.en .hero-title{white-space:normal;}.hero-title{font-size:clamp(24px,6vw,34px);}body.en .hero-title{font-size:clamp(20px,5vw,28px);}}
 .hero-right .hero-logo{height:250px;width:auto;max-width:100%;}
 @media(max-width:820px){.hero-grid{flex-direction:column-reverse;align-items:flex-start;gap:22px;}.hero-right .hero-logo{height:150px;}}
 @media(max-width:520px){.hero-right .hero-logo{height:120px;}}
@@ -222,7 +224,7 @@ body{font-size:17px;word-break:keep-all;overflow-wrap:break-word;text-wrap:prett
 <div class="hero"><div class="wrap hero-grid">
  <div class="hero-left">
  <div class="kick" data-ko="세종대학교 인공지능데이터사이언스학과" data-en="Sejong University · AI & Data Science"></div>
- <h1 class="hero-title" data-ko="인간 중심의 AI 연구" data-en="Human-Centered AI Research"></h1>
+ <h1 class="hero-title" data-ko="인간 중심의 AI 연구실" data-en="Human-Centered AI Research Lab"></h1>
  <div class="fullarea" data-ko="3D/XR 콘텐츠 생성 · AI 미디어 · 미디어 포렌식 &amp; 허위정보 탐지 · XAI" data-en="Generative 3D/XR · AI Media · Media Forensics &amp; Disinformation · XAI"></div>
  <p class="tagline" data-ko="비전 및 그래픽스 기술로 인간 중심의 기술을 만듭니다." data-en="Building human-centered technology with vision and graphics."></p>
  <div class="meta-row"><span data-ko="이수진 (SuJin Lee)" data-en="Prof. SuJin Lee"></span>
@@ -426,7 +428,7 @@ body{font-size:17px;word-break:keep-all;overflow-wrap:break-word;text-wrap:prett
 </div></footer>
 <script>
 var lang='ko';
-function applyLang(){document.querySelectorAll('[data-ko]').forEach(function(el){var v=el.getAttribute('data-'+lang);if(v!==null)el.innerHTML=v;});document.documentElement.lang=lang;document.getElementById('lang').innerHTML=(lang==='ko')?'<b>KO</b> / EN':'KO / <b>EN</b>';}
+function applyLang(){document.querySelectorAll('[data-ko]').forEach(function(el){var v=el.getAttribute('data-'+lang);if(v!==null)el.innerHTML=v;});document.documentElement.lang=lang;document.body.classList.toggle('en',lang==='en');document.getElementById('lang').innerHTML=(lang==='ko')?'<b>KO</b> / EN':'KO / <b>EN</b>';}
 function toggleLang(){lang=(lang==='ko')?'en':'ko';applyLang();document.getElementById('menu').classList.remove('open');}
 applyLang();document.getElementById('yr').textContent=new Date().getFullYear();
 </script></body></html>
