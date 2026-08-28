@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Research · HCAI Lab — Human-Centered AI &amp; Media Engineering | 이수진 SuJin Lee</title>
+<link rel="stylesheet" href="style.css"><meta name="description" content="HCAI Lab — Human-Centered AI & Media Engineering, Prof. SuJin Lee. Building human-centered technology with vision and graphics."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+</head><body>
+<header class="nav"><div class="wrap nav-inner">
+ <a class="brand" href="index.html" style="text-decoration:none;color:inherit">HCAI<span>·</span>Lab</a>
+ <div class="nav-right"><nav class="links" id="menu">
+  <a href="about.html" data-ko="소개" data-en="About"></a>
+  <a href="people.html" data-ko="구성원" data-en="People"></a>
+  <a href="research.html" data-ko="연구" data-en="Research"></a>
+  <a href="publications.html" data-ko="출판" data-en="Publications"></a>
+  <a href="work.html" data-ko="저서·특허" data-en="Books·Patents"></a>
+  <a href="projects.html" data-ko="프로젝트" data-en="Projects"></a>
+  <a href="activity.html" data-ko="활동" data-en="Activity"></a>
+  <a href="contact.html" data-ko="연락처" data-en="Contact"></a>
+ </nav>
+ <button class="langbtn" id="lang" onclick="toggleLang()"><b>KO</b> / EN</button>
+ <button class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+ </div></div></header>
+<main style="padding-top:24px"><section id="research"><div class="wrap">
+ <div class="sec-head"><span class="sec-num">03</span><h2 data-ko="연구: 3D/XR 생성 · 바이오 AI · 미디어 포렌식 &amp; 허위정보 탐지 · XAI" data-en="Research: Generative 3D/XR · Bio AI · Media Forensics &amp; Disinformation · XAI"></h2></div>
+ <p class="lead" style="margin-bottom:28px;" data-ko="비전·그래픽스 기반의 <b>3D 생성 모델</b>을 콘텐츠(<b>3D/XR 생성</b>)와 생명과학(<b>단백질·항체 구조 생성, 바이오 AI</b>)에 적용합니다. <b>미디어 포렌식 &amp; 허위정보 탐지</b>로 생성된 미디어의 진위를 판별하고, <b>설명가능 AI(XAI)</b>로 모델의 판단 근거를 제시합니다." data-en="We apply vision/graphics-based <b>3D generative models</b> to content (<b>3D/XR generation</b>) and to life science (<b>protein/antibody structure generation, bio AI</b>). <b>Media forensics &amp; disinformation detection</b> assesses the authenticity of generated media, and <b>explainable AI (XAI)</b> provides the evidence behind model decisions."></p>
+ <div class="posit">
+  <div class="prow"><span class="plabel" data-ko="전공분야" data-en="Field"></span><span class="pval" data-ko="<b>컴퓨터 비전 · 생성형 AI</b>" data-en="<b>Computer Vision · Generative AI</b>"></span></div>
+  <div class="prow"><span class="plabel" data-ko="세부 전공" data-en="Specialty"></span><span class="pval" data-ko="<b>시각 생성형 AI (Visual Generative AI)</b> · 3D/XR 인식·생성 · 멀티모달 탐지" data-en="<b>Visual Generative AI</b> · 3D/XR perception &amp; generation · multimodal detection"></span></div>
+  <div class="prow"><span class="plabel" data-ko="응용분야" data-en="Applications"></span><span class="pval" data-ko="XR·메타버스 콘텐츠 · 단백질·항체 설계 · 제약 QbD · 질병 바이오마커 · 허위정보 대응 · 에너지 예측 (XAI 응용)" data-en="XR/metaverse content · protein/antibody design · pharmaceutical QbD · disease biomarkers · disinformation response · energy forecasting (XAI)"></span></div>
+ </div>
+ <div class="areas">
+  <div class="area g3d"><div class="ak">Generative 3D/XR</div><h3><span class="adot g3d"></span><span data-ko="3D/XR 콘텐츠 생성" data-en="Generative 3D/XR"></span></h3>
+   <p class="q" data-ko="텍스트·이미지에서 3D/XR 콘텐츠를 어떻게 실시간으로 생성하고 제어하는가?" data-en="How do we generate and steer 3D/XR content from text and images, in real time?"></p>
+   <p data-ko="비전·그래픽스 기반의 제어 가능한 생성 파이프라인을 직접 구현합니다." data-en="We build authorable, vision/graphics-based generation pipelines ourselves."></p>
+   <div class="ev" data-ko="실시간 3D 생성(SF3D) · XR 객체 변환(특허) · 웹툰·게임 생성 · 지문자 생성 동화" data-en="Real-time 3D (SF3D) · XR object conversion (patent) · webtoon/game generation · sign-language storytelling"></div></div>
+  <div class="area bio"><div class="ak">Bio AI</div><h3><span class="adot bio"></span><span data-ko="바이오 AI: 구조 생성 · 설명가능 QbD" data-en="Bio AI: Structure Generation &amp; Explainable QbD"></span></h3>
+   <p class="q" data-ko="3D 생성 모델과 소표본 멀티모달 학습을 단백질·항체 설계와 의약품 품질(QbD)에 어떻게 옮기는가?" data-en="How do 3D generative models and small-sample multimodal learning transfer to protein/antibody design and pharmaceutical quality (QbD)?"></p>
+   <p data-ko="XR 객체를 생성하던 3D 생성 파이프라인을 단백질·항체 구조로, 에너지 예측의 XAI를 바이오마커 발굴과 QbD 근거 제시로 확장합니다." data-en="The 3D generative pipeline built for XR objects is carried to protein/antibody structures; the XAI used for energy forecasting is carried to biomarker discovery and QbD evidence."></p>
+   <div class="ev" data-ko="DKD 바이오마커·항체치료제(과기정통부) · 하이브리드 MVDA-NN QbD(Eur J Pharm Biopharm) · 양자 기반 항체 신약 연구회" data-en="DKD biomarkers &amp; antibody therapeutics (MSIT) · hybrid MVDA-NN for QbD (Eur J Pharm Biopharm) · quantum antibody discovery group"></div></div>
+  <div class="area trust"><div class="ak">Media Forensics &amp; Disinfo</div><h3><span class="adot trust"></span><span data-ko="미디어 포렌식 &amp; 허위정보 탐지" data-en="Media Forensics &amp; Disinformation"></span></h3>
+   <p class="q" data-ko="합성·조작 미디어의 진위를 어떻게 판별하고, 허위정보를 어떻게 탐지하는가?" data-en="How do we tell whether media is manipulated or synthetic, and detect disinformation?"></p>
+   <p data-ko="딥페이크·합성 얼굴(포렌식)과 텍스트 가짜뉴스(허위정보) 탐지 모델을 직접 구축합니다." data-en="We build both media-forensic models (deepfake/synthetic faces) and text-based fake-news detectors."></p>
+   <div class="ev" data-ko="위·변조/합성 얼굴 판별(Applied Sciences) · 가짜뉴스 탐지(BERT·EmoBERTa)" data-en="Face-forgery detection (Applied Sciences) · fake-news detection (BERT·EmoBERTa)"></div></div>
+  <div class="area xai"><div class="ak">Explainable AI</div><h3><span class="adot xai"></span><span data-ko="설명가능 AI (XAI)" data-en="Explainable AI (XAI)"></span></h3>
+   <p class="q" data-ko="모델의 판단을 어떻게 해석하고, 사람이 납득하도록 만드는가?" data-en="How do we interpret a model's decision so people can grasp it?"></p>
+   <p data-ko="입력변수 선택과 근거 제시로 예측·탐지·생성을 설명가능하게 만듭니다." data-en="Through feature selection and evidence, we make prediction, detection, and generation explainable."></p>
+   <div class="ev" data-ko="XAI 입력변수 선택(Electronics) · 설명가능 에너지 예측 · 탐지 근거 제시" data-en="XAI feature selection (Electronics) · explainable forecasting · evidence for detection"></div></div>
+ </div>
+ <p class="loopnote" data-ko="↻ <b>생성(콘텐츠·단백질) · 검증 · 설명(XAI)</b>이 하나로 이어집니다" data-en="↻ <b>generation (content &amp; proteins) · verification · explanation (XAI)</b> form one whole"></p>
+ <div class="sig"><span class="sec-num" data-ko="고유의 관점" data-en="Our Signature"></span>
+  <h3 data-ko="설명가능한 생성과 탐지" data-en="Explainable Generation & Detection"></h3>
+  <p data-ko="같은 <em>설명가능성(XAI)</em>으로, 창작자는 결과를 재생성이 아니라 <em>편집으로 제어</em>하고(3D/XR 생성), 이용자는 <em>왜 가짜인지를 납득</em>합니다(미디어 포렌식·허위정보 탐지). 생성과 탐지를 하나의 기술로 잇습니다." data-en="With one and the same <em>explainability (XAI)</em>, creators <em>steer by editing</em> (generation) and users <em>understand why something is fake</em> (detection). We join generation and detection through a single technology."></p></div>
+</div></section></main>
+<footer><div class="wrap"><div class="foot-note"><span>© <span id="yr"></span> HCAI Lab · SuJin Lee</span><span>Human-Centered AI &amp; Media Engineering</span></div></div></footer>
+<script src="script.js"></script></body></html>
