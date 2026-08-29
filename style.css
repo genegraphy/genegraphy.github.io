@@ -21,6 +21,7 @@ a{color:var(--acc);text-decoration:none;} a:hover{text-decoration:underline;}
 
 header.nav{position:sticky;top:0;z-index:50;background:rgba(8,8,10,.82);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;}
+.nav-right{display:flex;align-items:center;gap:18px;}
 .brand{font-family:var(--mono);font-weight:600;letter-spacing:.06em;font-size:14px;color:var(--ink);}
 .brand span{color:var(--vio);}
 nav.links{display:flex;gap:20px;align-items:center;}
