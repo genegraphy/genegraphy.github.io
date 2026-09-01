@@ -4,6 +4,36 @@
 <link rel="stylesheet" href="style.css"><meta name="description" content="HCAI Lab — Human-Centered AI & Media Engineering, Prof. SuJin Lee. Building human-centered technology with vision and graphics."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ── Research: 열(칼럼) 중심 스택 레이아웃 ── */
+.rlist{display:flex;flex-direction:column;gap:20px;}
+.rcard{--c:var(--vio);position:relative;background:var(--card);border:1px solid var(--line);
+ border-left:3px solid var(--c);border-radius:14px;padding:28px 30px 26px;transition:.2s;}
+.rcard:hover{border-color:var(--line2);border-left-color:var(--c);background:var(--card2);}
+.rcard.bio{--c:#7ee0b8;} .rcard.trust{--c:var(--amber);} .rcard.xai{--c:var(--rose);}
+.rtop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.rnum{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--c);}
+.rkey{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);}
+.rcard h3{font-family:var(--disp);font-weight:700;font-size:clamp(25px,3.4vw,34px);line-height:1.25;
+ letter-spacing:-.01em;margin:8px 0 12px;color:#fff;}
+.rcard h3 .adot{width:11px;height:11px;background:var(--c);box-shadow:0 0 12px var(--c);margin-right:11px;}
+.rq{font-size:15.5px;color:var(--ink);margin:0 0 14px;line-height:1.6;}
+.rbul{list-style:none;margin:0 0 20px;padding:0;}
+.rbul li{position:relative;padding-left:15px;color:var(--mut);font-size:15px;line-height:1.75;}
+.rbul li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--c);opacity:.75;}
+.rev{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:14px;}
+.rrow{display:grid;grid-template-columns:86px 1fr;gap:16px;align-items:start;}
+.rlab{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;color:var(--c);
+ border:1px solid var(--line2);border-radius:6px;padding:3px 0;text-align:center;white-space:nowrap;}
+.ritems{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
+.ritems li{font-size:14.5px;line-height:1.55;color:var(--ink);}
+.ritems .m{display:block;font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:3px;letter-spacing:.01em;}
+@media(max-width:640px){
+ .rcard{padding:22px 20px;}
+ .rrow{grid-template-columns:1fr;gap:8px;}
+ .rlab{justify-self:start;padding:3px 12px;}
+}
+</style>
 </head><body>
 <header class="nav"><div class="wrap nav-inner">
  <a class="brand" href="index.html" style="text-decoration:none;color:inherit">HCAI<span>·</span>Lab</a>
@@ -21,32 +51,151 @@
  <button class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
  </div></div></header>
 <main style="padding-top:24px"><section id="research"><div class="wrap">
- <div class="sec-head"><span class="sec-num">03</span><h2 data-ko="3D/XR 생성 · 바이오 AI· XAI · 미디어 포렌식 &amp; 허위정보 탐지 " data-en="Research: Generative 3D/XR · Bio AI · Media Forensics &amp; Disinformation · XAI"></h2></div>
+ <div class="sec-head"><span class="sec-num">03</span><h2 data-ko="연구: 3D/XR 생성 · 바이오 AI · 미디어 포렌식 &amp; 허위정보 탐지 · XAI" data-en="Research: Generative 3D/XR · Bio AI · Media Forensics &amp; Disinformation · XAI"></h2></div>
  <p class="lead" style="margin-bottom:28px;" data-ko="비전·그래픽스 기반의 <b>3D 생성 모델</b>을 콘텐츠(<b>3D/XR 생성</b>)와 생명과학(<b>단백질·항체 구조 생성, 바이오 AI</b>)에 적용합니다. <b>미디어 포렌식 &amp; 허위정보 탐지</b>로 생성된 미디어의 진위를 판별하고, <b>설명가능 AI(XAI)</b>로 모델의 판단 근거를 제시합니다." data-en="We apply vision/graphics-based <b>3D generative models</b> to content (<b>3D/XR generation</b>) and to life science (<b>protein/antibody structure generation, bio AI</b>). <b>Media forensics &amp; disinformation detection</b> assesses the authenticity of generated media, and <b>explainable AI (XAI)</b> provides the evidence behind model decisions."></p>
  <div class="posit">
   <div class="prow"><span class="plabel" data-ko="전공분야" data-en="Field"></span><span class="pval" data-ko="<b>컴퓨터 비전 · 생성형 AI</b>" data-en="<b>Computer Vision · Generative AI</b>"></span></div>
   <div class="prow"><span class="plabel" data-ko="세부 전공" data-en="Specialty"></span><span class="pval" data-ko="<b>시각 생성형 AI (Visual Generative AI)</b> · 3D/XR 인식·생성 · 멀티모달 탐지" data-en="<b>Visual Generative AI</b> · 3D/XR perception &amp; generation · multimodal detection"></span></div>
   <div class="prow"><span class="plabel" data-ko="응용분야" data-en="Applications"></span><span class="pval" data-ko="XR·메타버스 콘텐츠 · 단백질·항체 설계 · 제약 QbD · 질병 바이오마커 · 허위정보 대응 · 에너지 예측 (XAI 응용)" data-en="XR/metaverse content · protein/antibody design · pharmaceutical QbD · disease biomarkers · disinformation response · energy forecasting (XAI)"></span></div>
  </div>
- <div class="areas">
-  <div class="area g3d"><div class="ak">Generative 3D/XR</div><h3><span class="adot g3d"></span><span data-ko="3D/XR 콘텐츠 생성" data-en="Generative 3D/XR"></span></h3>
-   <p class="q" data-ko="텍스트·이미지에서 3D/XR 콘텐츠를 어떻게 실시간으로 생성하고 제어하는가?" data-en="How do we generate and steer 3D/XR content from text and images, in real time?"></p>
-   <p data-ko="비전·그래픽스 기반의 제어 가능한 생성 파이프라인을 직접 구현합니다." data-en="We build authorable, vision/graphics-based generation pipelines ourselves."></p>
-   <div class="ev" data-ko="실시간 3D 생성(SF3D) · XR 객체 변환(특허) · 웹툰·게임 생성 · 지문자 생성 동화" data-en="Real-time 3D (SF3D) · XR object conversion (patent) · webtoon/game generation · sign-language storytelling"></div></div>
-  <div class="area bio"><div class="ak">Bio AI</div><h3><span class="adot bio"></span><span data-ko="바이오 AI: 구조 생성 · 설명가능 QbD" data-en="Bio AI: Structure Generation &amp; Explainable QbD"></span></h3>
-   <p class="q" data-ko="3D 생성 모델과 소표본 멀티모달 학습을 단백질·항체 설계와 의약품 품질(QbD)에 어떻게 옮기는가?" data-en="How do 3D generative models and small-sample multimodal learning transfer to protein/antibody design and pharmaceutical quality (QbD)?"></p>
-   <p data-ko="XR 객체를 생성하던 3D 생성 파이프라인을 단백질·항체 구조로, 에너지 예측의 XAI를 바이오마커 발굴과 QbD 근거 제시로 확장합니다." data-en="The 3D generative pipeline built for XR objects is carried to protein/antibody structures; the XAI used for energy forecasting is carried to biomarker discovery and QbD evidence."></p>
-   <div class="ev" data-ko="DKD 바이오마커·항체치료제(과기정통부) · 하이브리드 MVDA-NN QbD(Eur J Pharm Biopharm) · 양자 기반 항체 신약 연구회" data-en="DKD biomarkers &amp; antibody therapeutics (MSIT) · hybrid MVDA-NN for QbD (Eur J Pharm Biopharm) · quantum antibody discovery group"></div></div>
-  <div class="area trust"><div class="ak">Media Forensics &amp; Disinfo</div><h3><span class="adot trust"></span><span data-ko="미디어 포렌식 &amp; 허위정보 탐지" data-en="Media Forensics &amp; Disinformation"></span></h3>
-   <p class="q" data-ko="합성·조작 미디어의 진위를 어떻게 판별하고, 허위정보를 어떻게 탐지하는가?" data-en="How do we tell whether media is manipulated or synthetic, and detect disinformation?"></p>
-   <p data-ko="딥페이크·합성 얼굴(포렌식)과 텍스트 가짜뉴스(허위정보) 탐지 모델을 직접 구축합니다." data-en="We build both media-forensic models (deepfake/synthetic faces) and text-based fake-news detectors."></p>
-   <div class="ev" data-ko="위·변조/합성 얼굴 판별(Applied Sciences) · 가짜뉴스 탐지(BERT·EmoBERTa)" data-en="Face-forgery detection (Applied Sciences) · fake-news detection (BERT·EmoBERTa)"></div></div>
-  <div class="area xai"><div class="ak">Explainable AI</div><h3><span class="adot xai"></span><span data-ko="설명가능 AI (XAI)" data-en="Explainable AI (XAI)"></span></h3>
-   <p class="q" data-ko="모델의 판단을 어떻게 해석하고, 사람이 납득하도록 만드는가?" data-en="How do we interpret a model's decision so people can grasp it?"></p>
-   <p data-ko="입력변수 선택과 근거 제시로 예측·탐지·생성을 설명가능하게 만듭니다." data-en="Through feature selection and evidence, we make prediction, detection, and generation explainable."></p>
-   <div class="ev" data-ko="XAI 입력변수 선택(Electronics) · 설명가능 에너지 예측 · 탐지 근거 제시" data-en="XAI feature selection (Electronics) · explainable forecasting · evidence for detection"></div></div>
+
+ <div class="rlist">
+
+  <!-- 01 Generative 3D/XR -->
+  <article class="rcard g3d">
+   <div class="rtop"><span class="rnum">01</span><span class="rkey">Generative 3D/XR</span></div>
+   <h3><span class="adot"></span><span data-ko="3D/XR 콘텐츠 생성" data-en="Generative 3D/XR"></span></h3>
+   <p class="rq" data-ko="텍스트·이미지에서 3D/XR 콘텐츠를 어떻게 실시간으로 생성하고 제어하는가?" data-en="How do we generate and steer 3D/XR content from text and images, in real time?"></p>
+   <ul class="rbul">
+    <li data-ko="비전·그래픽스 기반의 제어 가능한 생성 파이프라인을 직접 구현합니다." data-en="We implement authorable, vision/graphics-based generation pipelines ourselves."></li>
+    <li data-ko="실시간 3D 생성 모델(SF3D)을 XR 객체 변환·콘텐츠 제작 공정으로 연결합니다." data-en="Real-time 3D generation (SF3D) is connected to XR object conversion and content production."></li>
+    <li data-ko="웹툰·게임·동화 등 창작 영역으로 생성 기술의 적용 범위를 확장합니다." data-en="We extend the technology to creative domains: webtoons, games, and storytelling."></li>
+   </ul>
+   <div class="rev">
+    <div class="rrow"><span class="rlab" data-ko="논문" data-en="Papers"></span>
+     <ul class="ritems">
+      <li data-ko="Adaptive Depth-Aware Real-Time Object Perception for Contextual Mobile Augmented Reality<span class='m'>IEEE Access · 2026 · SCIE</span>" data-en="Adaptive Depth-Aware Real-Time Object Perception for Contextual Mobile Augmented Reality<span class='m'>IEEE Access · 2026 · SCIE</span>"></li>
+      <li data-ko="생성형 동화 창작 시스템 구축을 위한 한글 지문자–음절 변환 알고리즘 개발<span class='m'>차세대융합기술학회지 · 2025 · KCI</span>" data-en="A Korean fingerspelling-to-syllable conversion algorithm for a generative storytelling system<span class='m'>J. Convergence Tech. · 2025 · KCI</span>"></li>
+      <li data-ko="OpenAI API와 인간의 창의성 기반 게임 설계 방법론 연구<span class='m'>차세대융합기술학회지 · 2024 · KCI</span>" data-en="A game design methodology combining the OpenAI API with human creativity<span class='m'>J. Convergence Tech. · 2024 · KCI</span>"></li>
+      <li data-ko="인공지능 생성 기술 기반의 웹툰 생태계 패러다임 전환 연구<span class='m'>융복합지식학회논문지 · 2023 · KCI</span>" data-en="Paradigm shift of the webtoon ecosystem driven by generative AI<span class='m'>J. Convergence Knowledge · 2023 · KCI</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="학술대회" data-en="Conf."></span>
+     <ul class="ritems">
+      <li data-ko="VR Atelier: 실감미디어를 통한 인상파 예술작품 체험을 위한 AI 파이프라인 구축<span class='m'>한국방송·미디어공학회 하계학술대회 · 2026</span>" data-en="VR Atelier: an AI pipeline for experiencing Impressionist artworks in immersive media<span class='m'>KIBME Summer Conference · 2026</span>"></li>
+      <li data-ko="SF3D 모델 기반의 실시간 3D 생성 콘텐츠 기술개발 연구<span class='m'>한국콘텐츠학회 하계학술대회 · 2025</span>" data-en="Real-time 3D content generation based on the SF3D model<span class='m'>KoCon Summer Conference · 2025</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="특허" data-en="Patents"></span>
+     <ul class="ritems">
+      <li data-ko="생성형 3차원 모델의 실시간 XR 객체 변환 방법 및 그 장치<span class='m'>출원 10-2026-005794 · 2026.03.31</span>" data-en="Method and apparatus for real-time XR object conversion of generative 3D models<span class='m'>Filed 10-2026-005794 · 2026.03.31</span>"></li>
+      <li data-ko="지문자 기반 콘텐츠 창작 장치 및 그 방법<span class='m'>출원 10-2026-0014039 · 2026.01.23</span>" data-en="Apparatus and method for fingerspelling-based content creation<span class='m'>Filed 10-2026-0014039 · 2026.01.23</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="과제" data-en="Projects"></span>
+     <ul class="ritems">
+      <li data-ko="메타버스 융합대학원 (세종대학교)<span class='m'>과기정통부(정보통신기획평가원) · 2023–26 · 공동연구</span>" data-en="Metaverse Convergence Graduate School (Sejong Univ.)<span class='m'>MSIT (IITP) · 2023–26 · Co-PI</span>"></li>
+      <li data-ko="만화·웹툰 데이터 (AI 학습용 데이터 구축)<span class='m'>과기정통부(한국지능정보사회진흥원) · 2023 · 공동연구</span>" data-en="Comics/webtoon data (AI training data construction)<span class='m'>MSIT (NIA) · 2023 · Co-PI</span>"></li>
+      <li data-ko="VR을 활용한 동작구 인문 콘텐츠 개발: 용양봉저정을 중심으로<span class='m'>문화체육관광부 · 2021–22 · 공동연구</span>" data-en="VR humanities content for Dongjak-gu: Yongyangbongjeojeong<span class='m'>MCST · 2021–22 · Co-PI</span>"></li>
+      <li data-ko="CGAN을 이용한 새로운 자기 이미지 표현연구<span class='m'>세종대학교 산학협력단 · 2021–22 · 연구책임(PI)</span>" data-en="Self-image representation using CGAN<span class='m'>Sejong Univ. · 2021–22 · PI</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="저서" data-en="Books"></span>
+     <ul class="ritems">
+      <li data-ko="『인공지능 생성 모델 예술』<span class='m'>이수진(단독) · 커뮤니케이션북스 · 2024</span>" data-en="Art of AI Generative Models<span class='m'>SuJin Lee (sole) · CommunicationBooks · 2024</span>"></li>
+      <li data-ko="『예술가의 메타버스 사용법』<span class='m'>이수진(단독) · 커뮤니케이션북스 · 2023</span>" data-en="The Artist's Guide to the Metaverse<span class='m'>SuJin Lee (sole) · CommunicationBooks · 2023</span>"></li>
+     </ul></div>
+   </div>
+  </article>
+
+  <!-- 02 Bio AI -->
+  <article class="rcard bio">
+   <div class="rtop"><span class="rnum">02</span><span class="rkey">Bio AI</span></div>
+   <h3><span class="adot"></span><span data-ko="바이오 AI: 구조 생성 · 설명가능 QbD" data-en="Bio AI: Structure Generation &amp; Explainable QbD"></span></h3>
+   <p class="rq" data-ko="3D 생성 모델과 소표본 멀티모달 학습을 단백질·항체 설계와 의약품 품질(QbD)에 어떻게 옮기는가?" data-en="How do 3D generative models and small-sample multimodal learning transfer to protein/antibody design and pharmaceutical quality (QbD)?"></p>
+   <ul class="rbul">
+    <li data-ko="XR 객체를 생성하던 3D 생성 파이프라인을 단백질·항체 구조 설계로 이전합니다." data-en="The 3D generative pipeline built for XR objects is transferred to protein/antibody structures."></li>
+    <li data-ko="소표본 제약 조건에서 멀티모달 학습으로 의약품 품질(QbD) 예측 모델을 구축합니다." data-en="Under small-sample constraints, multimodal learning builds QbD prediction models."></li>
+    <li data-ko="에너지 예측에서 축적한 XAI를 바이오마커 발굴과 품질 근거 제시로 확장합니다." data-en="XAI developed for energy forecasting is extended to biomarker discovery and QbD evidence."></li>
+   </ul>
+   <div class="rev">
+    <div class="rrow"><span class="rlab" data-ko="논문" data-en="Papers"></span>
+     <ul class="ritems">
+      <li data-ko="A hybrid MVDA-neural network model with auxiliary learning for pharmaceutical quality by design under small-sample constraints<span class='m'>European Journal of Pharmaceutics and Biopharmaceutics · 2026 · SCIE</span>" data-en="A hybrid MVDA-neural network model with auxiliary learning for pharmaceutical quality by design under small-sample constraints<span class='m'>European Journal of Pharmaceutics and Biopharmaceutics · 2026 · SCIE</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="과제" data-en="Projects"></span>
+     <ul class="ritems">
+      <li data-ko="AI 기반 당뇨병성 신장질환(DKD) 바이오마커 발굴을 통한 진단제 및 항체치료제 기술 개발<span class='m'>과학기술정보통신부 · 2026– · 공동연구</span>" data-en="AI-based DKD biomarker discovery for diagnostics and antibody therapeutics<span class='m'>MSIT · 2026– · Co-PI</span>"></li>
+      <li data-ko="양자 기반 항체 신약 연구회 (교내 연구회지원사업)<span class='m'>세종대학교 산학협력단 · 2026–27 · 연구책임(PI)</span>" data-en="Quantum-based antibody drug discovery research group<span class='m'>Sejong Univ. · 2026–27 · PI</span>"></li>
+      <li data-ko="무·오이·호박의 빅데이터 기반 인공지능 기술을 활용한 표현체 육종 예측모델 개발<span class='m'>농림축산식품부 · 2022–24 · 공동연구</span>" data-en="AI phenotype-breeding prediction models for radish, cucumber, and pumpkin<span class='m'>MAFRA · 2022–24 · Co-PI</span>"></li>
+     </ul></div>
+   </div>
+  </article>
+
+  <!-- 03 Media Forensics & Disinformation -->
+  <article class="rcard trust">
+   <div class="rtop"><span class="rnum">03</span><span class="rkey">Media Forensics &amp; Disinfo</span></div>
+   <h3><span class="adot"></span><span data-ko="미디어 포렌식 &amp; 허위정보 탐지" data-en="Media Forensics &amp; Disinformation"></span></h3>
+   <p class="rq" data-ko="합성·조작 미디어의 진위를 어떻게 판별하고, 허위정보를 어떻게 탐지하는가?" data-en="How do we tell whether media is manipulated or synthetic, and detect disinformation?"></p>
+   <ul class="rbul">
+    <li data-ko="딥페이크·합성 얼굴을 판별하는 미디어 포렌식 모델을 직접 구축합니다." data-en="We build media-forensic models that identify deepfake and synthetic faces."></li>
+    <li data-ko="문맥과 감정 특징을 결합한 텍스트 기반 가짜뉴스 탐지 모델을 개발합니다." data-en="We develop text-based fake-news detectors combining contextual and emotional features."></li>
+    <li data-ko="탐지 기술을 뉴스 제작의 원칙·규범 논의로 연결합니다." data-en="Detection technology is linked to principles and norms for news production."></li>
+   </ul>
+   <div class="rev">
+    <div class="rrow"><span class="rlab" data-ko="논문" data-en="Papers"></span>
+     <ul class="ritems">
+      <li data-ko="Tampered and Computer-Generated Face Images Identification Based on Deep Learning<span class='m'>Applied Sciences · 2020 · SCIE</span>" data-en="Tampered and Computer-Generated Face Images Identification Based on Deep Learning<span class='m'>Applied Sciences · 2020 · SCIE</span>"></li>
+      <li data-ko="Deep Learning based Computer Generated Face Identification using Convolutional Neural Network<span class='m'>Applied Sciences · 2018 · SCIE</span>" data-en="Deep Learning based Computer Generated Face Identification using Convolutional Neural Network<span class='m'>Applied Sciences · 2018 · SCIE</span>"></li>
+      <li data-ko="가짜뉴스 탐지를 위한 BERT 문맥 및 EmoBERTa 감정 특징 기반 하이브리드 아키텍처<span class='m'>융복합지식학회논문지 · 2025 · KCI</span>" data-en="A hybrid architecture using BERT context and EmoBERTa emotion features for fake-news detection<span class='m'>J. Convergence Knowledge · 2025 · KCI</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="학술대회" data-en="Conf."></span>
+     <ul class="ritems">
+      <li data-ko="Face Recognition Using Shallow Age-Invariant Data<span class='m'>36th Int'l Conf. on Image and Vision Computing New Zealand (IVCNZ) · 2021</span>" data-en="Face Recognition Using Shallow Age-Invariant Data<span class='m'>36th Int'l Conf. on Image and Vision Computing New Zealand (IVCNZ) · 2021</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="특허" data-en="Patents"></span>
+     <ul class="ritems">
+      <li data-ko="가짜 뉴스 탐지 방법 및 그 장치<span class='m'>출원 10-2026-0017009 · 2026.01.02</span>" data-en="Method and apparatus for fake-news detection<span class='m'>Filed 10-2026-0017009 · 2026.01.02</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="저서" data-en="Books"></span>
+     <ul class="ritems">
+      <li data-ko="『AI 뉴스룸: 기술·원칙·규범』<span class='m'>최승재·손승혜·이수진 · 커뮤니케이션북스 · 2026</span>" data-en="The AI Newsroom: Technology, Principles, Norms<span class='m'>S. Choi, S. Son, SuJin Lee · CommunicationBooks · 2026</span>"></li>
+     </ul></div>
+   </div>
+  </article>
+
+  <!-- 04 Explainable AI -->
+  <article class="rcard xai">
+   <div class="rtop"><span class="rnum">04</span><span class="rkey">Explainable AI</span></div>
+   <h3><span class="adot"></span><span data-ko="설명가능 AI (XAI)" data-en="Explainable AI (XAI)"></span></h3>
+   <p class="rq" data-ko="모델의 판단을 어떻게 해석하고, 사람이 납득하도록 만드는가?" data-en="How do we interpret a model's decision so people can grasp it?"></p>
+   <ul class="rbul">
+    <li data-ko="입력변수 선택과 근거 제시로 예측·탐지·생성을 설명가능하게 만듭니다." data-en="Through feature selection and evidence, prediction, detection, and generation become explainable."></li>
+    <li data-ko="에너지 수요·열공급망 등 실제 산업 데이터에서 설명가능 예측 모델을 검증합니다." data-en="Explainable forecasting models are validated on real industrial data such as energy demand and heat networks."></li>
+    <li data-ko="검증된 설명 방법론을 바이오·미디어 탐지 연구로 이전합니다." data-en="The validated explanation methodology is transferred to bio and media-detection research."></li>
+   </ul>
+   <div class="rev">
+    <div class="rrow"><span class="rlab" data-ko="논문" data-en="Papers"></span>
+     <ul class="ritems">
+      <li data-ko="eXplainable AI (XAI)-Based Input Variable Selection Methodology for Forecasting Energy Consumption<span class='m'>Electronics · 2022 · SCIE</span>" data-en="eXplainable AI (XAI)-Based Input Variable Selection Methodology for Forecasting Energy Consumption<span class='m'>Electronics · 2022 · SCIE</span>"></li>
+      <li data-ko="A machine learning ensemble framework based on a clustering algorithm for improving electric power consumption performance<span class='m'>Scientific Reports · 2025 · SCIE</span>" data-en="A machine learning ensemble framework based on a clustering algorithm for improving electric power consumption performance<span class='m'>Scientific Reports · 2025 · SCIE</span>"></li>
+      <li data-ko="Enhanced Data Processing and Machine Learning Techniques for Energy Consumption Forecasting<span class='m'>Electronics · 2024 · SCIE</span>" data-en="Enhanced Data Processing and Machine Learning Techniques for Energy Consumption Forecasting<span class='m'>Electronics · 2024 · SCIE</span>"></li>
+      <li data-ko="Daily and seasonal heat usage patterns analysis in heat networks<span class='m'>Scientific Reports · 2022 · SCIE</span>" data-en="Daily and seasonal heat usage patterns analysis in heat networks<span class='m'>Scientific Reports · 2022 · SCIE</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="학술대회" data-en="Conf."></span>
+     <ul class="ritems">
+      <li data-ko="설명 가능한 인공지능 매개 에너지 수요 예측 및 효율성 연구<span class='m'>한국방송·미디어공학회 춘계학술대회 · 2022</span>" data-en="Explainable AI-mediated energy demand forecasting and efficiency<span class='m'>KIBME Spring Conference · 2022</span>"></li>
+      <li data-ko="빅데이터 기반 열공급망의 이상탐지를 위한 기계학습 방법론 연구<span class='m'>한국차세대컴퓨팅학회 춘계학술대회 · 2022</span>" data-en="Machine learning methodology for anomaly detection in big-data heat networks<span class='m'>KINGComputing Spring Conference · 2022</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="특허" data-en="Patents"></span>
+     <ul class="ritems">
+      <li data-ko="공중주택의 다중 도메인 이상 탐지 방법 및 그 장치 (공동발명)<span class='m'>출원 10-2023-0188763 · 2023.12.21</span>" data-en="Multi-domain anomaly detection for public housing (co-invented)<span class='m'>Filed 10-2023-0188763 · 2023.12.21</span>"></li>
+     </ul></div>
+    <div class="rrow"><span class="rlab" data-ko="과제" data-en="Projects"></span>
+     <ul class="ritems">
+      <li data-ko="복합 도메인의 에너지 수요 빅데이터를 활용한 설명 가능한 인공지능 기반 진단 및 분석 프레임워크 개발<span class='m'>산업통상자원부(한국에너지기술평가원) · 2022–24 · 공동연구</span>" data-en="Explainable AI diagnosis and analysis framework using multi-domain energy demand big data<span class='m'>MOTIE (KETEP) · 2022–24 · Co-PI</span>"></li>
+     </ul></div>
+   </div>
+  </article>
+
  </div>
- <p class="loopnote" data-ko="↻ <b>생성(콘텐츠·단백질) · 검증 · 설명(XAI)</b>이 하나로 이어집니다" data-en="↻ <b>generation (content &amp; proteins) · verification · explanation (XAI)</b> form one whole"></p>
+
  <div class="sig"><span class="sec-num" data-ko="고유의 관점" data-en="Our Signature"></span>
   <h3 data-ko="설명가능한 생성과 탐지" data-en="Explainable Generation & Detection"></h3>
   <p data-ko="같은 <em>설명가능성(XAI)</em>으로, 창작자는 결과를 재생성이 아니라 <em>편집으로 제어</em>하고(3D/XR 생성), 이용자는 <em>왜 가짜인지를 납득</em>합니다(미디어 포렌식·허위정보 탐지). 생성과 탐지를 하나의 기술로 잇습니다." data-en="With one and the same <em>explainability (XAI)</em>, creators <em>steer by editing</em> (generation) and users <em>understand why something is fake</em> (detection). We join generation and detection through a single technology."></p></div>
