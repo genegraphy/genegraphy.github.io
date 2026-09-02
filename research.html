@@ -16,9 +16,6 @@
 .rtop{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
 .rnum{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--c);}
 .rkey{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);}
-.expall{margin-left:auto;background:transparent;border:1px solid var(--line2);border-radius:16px;
- padding:4px 12px;font-family:var(--mono);font-size:11.5px;color:var(--mut);cursor:pointer;transition:.18s;}
-.expall:hover{border-color:var(--c);color:var(--c);}
 .rcard h3{font-family:var(--disp);font-weight:700;font-size:clamp(25px,3.4vw,34px);line-height:1.25;
  letter-spacing:-.01em;margin:8px 0 12px;color:#fff;}
 .rcard h3 .adot{width:11px;height:11px;background:var(--c);box-shadow:0 0 12px var(--c);margin-right:11px;}
@@ -27,27 +24,26 @@
 .rbul li{position:relative;padding-left:15px;color:var(--mut);font-size:15px;line-height:1.75;}
 .rbul li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--c);opacity:.75;}
 
-.rev{border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:8px;}
-.rgroup{border:1px solid var(--line);border-radius:10px;background:var(--bg2);overflow:hidden;}
-.rgroup>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;padding:12px 16px;transition:.15s;}
-.rgroup>summary::-webkit-details-marker{display:none;}
-.rgroup>summary:hover{background:var(--card2);}
-.rgroup[open]>summary{background:var(--card2);border-bottom:1px solid var(--line);}
-.rlab{font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--c);
- border:1px solid var(--line2);border-radius:7px;padding:4px 13px;white-space:nowrap;transition:.15s;}
-.rgroup[open]>summary .rlab{border-color:var(--c);}
-.gcnt{font-family:var(--mono);font-size:12px;color:var(--mut);}
-.chev{margin-left:auto;color:var(--faint);font-size:11px;transition:transform .2s;}
-.rgroup[open] .chev{transform:rotate(180deg);color:var(--c);}
-.ritems{list-style:none;margin:0;padding:14px 16px 16px;display:grid;gap:10px;}
+.rev{border-top:1px solid var(--line);padding-top:18px;}
+.rtabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--line2);}
+.rtab{position:relative;top:1px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+ background:transparent;border:1px solid var(--line);border-bottom:none;border-radius:9px 9px 0 0;
+ padding:9px 16px;font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.03em;
+ color:var(--mut);transition:.15s;}
+.rtab i{font-style:normal;font-size:11px;font-weight:400;color:var(--faint);}
+.rtab:hover{color:var(--c);border-color:var(--line2);background:var(--card2);}
+.rtab.on{color:var(--c);border-color:var(--line2);background:var(--card2);box-shadow:inset 0 2px 0 var(--c);}
+.rtab.on i{color:var(--c);}
+.rpanel{border:1px solid var(--line2);border-top:none;border-radius:0 0 10px 10px;background:var(--card2);}
+.rpanel[hidden]{display:none;}
+.ritems{list-style:none;margin:0;padding:16px 18px 18px;display:grid;gap:10px;}
 .ritems li{font-size:14.5px;line-height:1.55;color:var(--ink);position:relative;padding-left:14px;}
 .ritems li::before{content:"";position:absolute;left:0;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--c);opacity:.55;}
 .ritems .m{display:block;font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:3px;letter-spacing:.01em;}
 @media(max-width:640px){
  .rcard{padding:22px 20px;}
- .expall{margin-left:0;}
- .rgroup>summary{gap:9px;padding:10px 12px;}
- .rlab{font-size:11.5px;padding:3px 10px;}
+ .rtab{padding:8px 12px;font-size:11.5px;gap:6px;}
+ .ritems{padding:14px 14px 16px;}
 }
 </style>
 </head><body>
@@ -79,8 +75,7 @@
 
   <!-- 01 Generative 3D/XR -->
   <article class="rcard g3d">
-   <div class="rtop"><span class="rnum">01</span><span class="rkey">Generative 3D/XR</span>
-    <button class="expall" onclick="toggleAll(this)" data-ko="＋ 실적 모두 보기" data-en="＋ Show all"></button></div>
+   <div class="rtop"><span class="rnum">01</span><span class="rkey">Generative 3D/XR</span></div>
    <h3><span class="adot"></span><span data-ko="3D/XR 콘텐츠 생성" data-en="Generative 3D/XR"></span></h3>
    <p class="rq" data-ko="텍스트·이미지에서 3D/XR 콘텐츠를 어떻게 실시간으로 생성하고 제어하는가?" data-en="How do we generate and steer 3D/XR content from text and images, in real time?"></p>
    <ul class="rbul">
@@ -89,48 +84,55 @@
     <li data-ko="웹툰·게임·동화 등 창작 영역으로 생성 기술의 적용 범위를 확장합니다." data-en="We extend the technology to creative domains: webtoons, games, and storytelling."></li>
    </ul>
    <div class="rev">
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="논문" data-en="Papers"></span><span class="gcnt">4</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+    <div class="rtabs">
+     <button class="rtab" onclick="showTab(this)" data-ko="논문 <i>4</i>" data-en="Papers <i>4</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="학술대회 <i>2</i>" data-en="Conference <i>2</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="특허 <i>2</i>" data-en="Patents <i>2</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="과제 <i>4</i>" data-en="Projects <i>4</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="저서 <i>2</i>" data-en="Books <i>2</i>"></button>
+    </div>
+    <div class="rpanels">
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="Adaptive Depth-Aware Real-Time Object Perception for Contextual Mobile Augmented Reality<span class='m'>IEEE Access · 2026 · SCIE</span>" data-en="Adaptive Depth-Aware Real-Time Object Perception for Contextual Mobile Augmented Reality<span class='m'>IEEE Access · 2026 · SCIE</span>"></li>
       <li data-ko="생성형 동화 창작 시스템 구축을 위한 한글 지문자–음절 변환 알고리즘 개발<span class='m'>차세대융합기술학회지 · 2025 · KCI</span>" data-en="A Korean fingerspelling-to-syllable conversion algorithm for a generative storytelling system<span class='m'>J. Convergence Tech. · 2025 · KCI</span>"></li>
       <li data-ko="OpenAI API와 인간의 창의성 기반 게임 설계 방법론 연구<span class='m'>차세대융합기술학회지 · 2024 · KCI</span>" data-en="A game design methodology combining the OpenAI API with human creativity<span class='m'>J. Convergence Tech. · 2024 · KCI</span>"></li>
       <li data-ko="인공지능 생성 기술 기반의 웹툰 생태계 패러다임 전환 연구<span class='m'>융복합지식학회논문지 · 2023 · KCI</span>" data-en="Paradigm shift of the webtoon ecosystem driven by generative AI<span class='m'>J. Convergence Knowledge · 2023 · KCI</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="학술대회" data-en="Conference"></span><span class="gcnt">2</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="VR Atelier: 실감미디어를 통한 인상파 예술작품 체험을 위한 AI 파이프라인 구축<span class='m'>한국방송·미디어공학회 하계학술대회 · 2026</span>" data-en="VR Atelier: an AI pipeline for experiencing Impressionist artworks in immersive media<span class='m'>KIBME Summer Conference · 2026</span>"></li>
       <li data-ko="SF3D 모델 기반의 실시간 3D 생성 콘텐츠 기술개발 연구<span class='m'>한국콘텐츠학회 하계학술대회 · 2025</span>" data-en="Real-time 3D content generation based on the SF3D model<span class='m'>KoCon Summer Conference · 2025</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="특허" data-en="Patents"></span><span class="gcnt">2</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="생성형 3차원 모델의 실시간 XR 객체 변환 방법 및 그 장치<span class='m'>출원 10-2026-005794 · 2026.03.31</span>" data-en="Method and apparatus for real-time XR object conversion of generative 3D models<span class='m'>Filed 10-2026-005794 · 2026.03.31</span>"></li>
       <li data-ko="지문자 기반 콘텐츠 창작 장치 및 그 방법<span class='m'>출원 10-2026-0014039 · 2026.01.23</span>" data-en="Apparatus and method for fingerspelling-based content creation<span class='m'>Filed 10-2026-0014039 · 2026.01.23</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="과제" data-en="Projects"></span><span class="gcnt">4</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="메타버스 융합대학원 (세종대학교)<span class='m'>과기정통부(정보통신기획평가원) · 2023–26 · 공동연구</span>" data-en="Metaverse Convergence Graduate School (Sejong Univ.)<span class='m'>MSIT (IITP) · 2023–26 · Co-PI</span>"></li>
       <li data-ko="만화·웹툰 데이터 (AI 학습용 데이터 구축)<span class='m'>과기정통부(한국지능정보사회진흥원) · 2023 · 공동연구</span>" data-en="Comics/webtoon data (AI training data construction)<span class='m'>MSIT (NIA) · 2023 · Co-PI</span>"></li>
       <li data-ko="VR을 활용한 동작구 인문 콘텐츠 개발: 용양봉저정을 중심으로<span class='m'>문화체육관광부 · 2021–22 · 공동연구</span>" data-en="VR humanities content for Dongjak-gu: Yongyangbongjeojeong<span class='m'>MCST · 2021–22 · Co-PI</span>"></li>
       <li data-ko="CGAN을 이용한 새로운 자기 이미지 표현연구<span class='m'>세종대학교 산학협력단 · 2021–22 · 연구책임(PI)</span>" data-en="Self-image representation using CGAN<span class='m'>Sejong Univ. · 2021–22 · PI</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="저서" data-en="Books"></span><span class="gcnt">2</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="『인공지능 생성 모델 예술』<span class='m'>이수진(단독) · 커뮤니케이션북스 · 2024</span>" data-en="Art of AI Generative Models<span class='m'>SuJin Lee (sole) · CommunicationBooks · 2024</span>"></li>
       <li data-ko="『예술가의 메타버스 사용법』<span class='m'>이수진(단독) · 커뮤니케이션북스 · 2023</span>" data-en="The Artist's Guide to the Metaverse<span class='m'>SuJin Lee (sole) · CommunicationBooks · 2023</span>"></li>
-     </ul></details>
-
+     </ul>
+     </div>
+    </div>
    </div>
   </article>
 
   <!-- 02 Bio AI -->
   <article class="rcard bio">
-   <div class="rtop"><span class="rnum">02</span><span class="rkey">Bio AI</span>
-    <button class="expall" onclick="toggleAll(this)" data-ko="＋ 실적 모두 보기" data-en="＋ Show all"></button></div>
+   <div class="rtop"><span class="rnum">02</span><span class="rkey">Bio AI</span></div>
    <h3><span class="adot"></span><span data-ko="바이오 AI: 구조 생성 · 설명가능 QbD" data-en="Bio AI: Structure Generation &amp; Explainable QbD"></span></h3>
    <p class="rq" data-ko="3D 생성 모델과 소표본 멀티모달 학습을 단백질·항체 설계와 의약품 품질(QbD)에 어떻게 옮기는가?" data-en="How do 3D generative models and small-sample multimodal learning transfer to protein/antibody design and pharmaceutical quality (QbD)?"></p>
    <ul class="rbul">
@@ -139,26 +141,30 @@
     <li data-ko="에너지 예측에서 축적한 XAI를 바이오마커 발굴과 품질 근거 제시로 확장합니다." data-en="XAI developed for energy forecasting is extended to biomarker discovery and QbD evidence."></li>
    </ul>
    <div class="rev">
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="논문" data-en="Papers"></span><span class="gcnt">1</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+    <div class="rtabs">
+     <button class="rtab" onclick="showTab(this)" data-ko="논문 <i>1</i>" data-en="Papers <i>1</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="과제 <i>3</i>" data-en="Projects <i>3</i>"></button>
+    </div>
+    <div class="rpanels">
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="A hybrid MVDA-neural network model with auxiliary learning for pharmaceutical quality by design under small-sample constraints<span class='m'>European Journal of Pharmaceutics and Biopharmaceutics · 2026 · SCIE</span>" data-en="A hybrid MVDA-neural network model with auxiliary learning for pharmaceutical quality by design under small-sample constraints<span class='m'>European Journal of Pharmaceutics and Biopharmaceutics · 2026 · SCIE</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="과제" data-en="Projects"></span><span class="gcnt">3</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="AI 기반 당뇨병성 신장질환(DKD) 바이오마커 발굴을 통한 진단제 및 항체치료제 기술 개발<span class='m'>과학기술정보통신부 · 2026– · 공동연구</span>" data-en="AI-based DKD biomarker discovery for diagnostics and antibody therapeutics<span class='m'>MSIT · 2026– · Co-PI</span>"></li>
       <li data-ko="양자 기반 항체 신약 연구회 (교내 연구회지원사업)<span class='m'>세종대학교 산학협력단 · 2026–27 · 연구책임(PI)</span>" data-en="Quantum-based antibody drug discovery research group<span class='m'>Sejong Univ. · 2026–27 · PI</span>"></li>
       <li data-ko="무·오이·호박의 빅데이터 기반 인공지능 기술을 활용한 표현체 육종 예측모델 개발<span class='m'>농림축산식품부 · 2022–24 · 공동연구</span>" data-en="AI phenotype-breeding prediction models for radish, cucumber, and pumpkin<span class='m'>MAFRA · 2022–24 · Co-PI</span>"></li>
-     </ul></details>
-
+     </ul>
+     </div>
+    </div>
    </div>
   </article>
 
   <!-- 03 Explainable AI -->
   <article class="rcard xai">
-   <div class="rtop"><span class="rnum">03</span><span class="rkey">Explainable AI</span>
-    <button class="expall" onclick="toggleAll(this)" data-ko="＋ 실적 모두 보기" data-en="＋ Show all"></button></div>
+   <div class="rtop"><span class="rnum">03</span><span class="rkey">Explainable AI</span></div>
    <h3><span class="adot"></span><span data-ko="설명가능 AI (XAI)" data-en="Explainable AI (XAI)"></span></h3>
    <p class="rq" data-ko="모델의 판단을 어떻게 해석하고, 사람이 납득하도록 만드는가?" data-en="How do we interpret a model's decision so people can grasp it?"></p>
    <ul class="rbul">
@@ -167,37 +173,43 @@
     <li data-ko="검증된 설명 방법론을 바이오·미디어 탐지 연구로 이전합니다." data-en="The validated explanation methodology is transferred to bio and media-detection research."></li>
    </ul>
    <div class="rev">
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="논문" data-en="Papers"></span><span class="gcnt">4</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+    <div class="rtabs">
+     <button class="rtab" onclick="showTab(this)" data-ko="논문 <i>4</i>" data-en="Papers <i>4</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="학술대회 <i>2</i>" data-en="Conference <i>2</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="특허 <i>1</i>" data-en="Patents <i>1</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="과제 <i>1</i>" data-en="Projects <i>1</i>"></button>
+    </div>
+    <div class="rpanels">
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="eXplainable AI (XAI)-Based Input Variable Selection Methodology for Forecasting Energy Consumption<span class='m'>Electronics · 2022 · SCIE</span>" data-en="eXplainable AI (XAI)-Based Input Variable Selection Methodology for Forecasting Energy Consumption<span class='m'>Electronics · 2022 · SCIE</span>"></li>
       <li data-ko="A machine learning ensemble framework based on a clustering algorithm for improving electric power consumption performance<span class='m'>Scientific Reports · 2025 · SCIE</span>" data-en="A machine learning ensemble framework based on a clustering algorithm for improving electric power consumption performance<span class='m'>Scientific Reports · 2025 · SCIE</span>"></li>
       <li data-ko="Enhanced Data Processing and Machine Learning Techniques for Energy Consumption Forecasting<span class='m'>Electronics · 2024 · SCIE</span>" data-en="Enhanced Data Processing and Machine Learning Techniques for Energy Consumption Forecasting<span class='m'>Electronics · 2024 · SCIE</span>"></li>
       <li data-ko="Daily and seasonal heat usage patterns analysis in heat networks<span class='m'>Scientific Reports · 2022 · SCIE</span>" data-en="Daily and seasonal heat usage patterns analysis in heat networks<span class='m'>Scientific Reports · 2022 · SCIE</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="학술대회" data-en="Conference"></span><span class="gcnt">2</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="설명 가능한 인공지능 매개 에너지 수요 예측 및 효율성 연구<span class='m'>한국방송·미디어공학회 춘계학술대회 · 2022</span>" data-en="Explainable AI-mediated energy demand forecasting and efficiency<span class='m'>KIBME Spring Conference · 2022</span>"></li>
       <li data-ko="빅데이터 기반 열공급망의 이상탐지를 위한 기계학습 방법론 연구<span class='m'>한국차세대컴퓨팅학회 춘계학술대회 · 2022</span>" data-en="Machine learning methodology for anomaly detection in big-data heat networks<span class='m'>KINGComputing Spring Conference · 2022</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="특허" data-en="Patents"></span><span class="gcnt">1</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="공중주택의 다중 도메인 이상 탐지 방법 및 그 장치 (공동발명)<span class='m'>출원 10-2023-0188763 · 2023.12.21</span>" data-en="Multi-domain anomaly detection for public housing (co-invented)<span class='m'>Filed 10-2023-0188763 · 2023.12.21</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="과제" data-en="Projects"></span><span class="gcnt">1</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="복합 도메인의 에너지 수요 빅데이터를 활용한 설명 가능한 인공지능 기반 진단 및 분석 프레임워크 개발<span class='m'>산업통상자원부(한국에너지기술평가원) · 2022–24 · 공동연구</span>" data-en="Explainable AI diagnosis and analysis framework using multi-domain energy demand big data<span class='m'>MOTIE (KETEP) · 2022–24 · Co-PI</span>"></li>
-     </ul></details>
-
+     </ul>
+     </div>
+    </div>
    </div>
   </article>
   <!-- 04 Media Forensics & Disinformation -->
   <article class="rcard trust">
-   <div class="rtop"><span class="rnum">04</span><span class="rkey">Media Forensics &amp; Disinfo</span>
-    <button class="expall" onclick="toggleAll(this)" data-ko="＋ 실적 모두 보기" data-en="＋ Show all"></button></div>
+   <div class="rtop"><span class="rnum">04</span><span class="rkey">Media Forensics &amp; Disinfo</span></div>
    <h3><span class="adot"></span><span data-ko="미디어 포렌식 &amp; 허위정보 탐지" data-en="Media Forensics &amp; Disinformation"></span></h3>
    <p class="rq" data-ko="합성·조작 미디어의 진위를 어떻게 판별하고, 허위정보를 어떻게 탐지하는가?" data-en="How do we tell whether media is manipulated or synthetic, and detect disinformation?"></p>
    <ul class="rbul">
@@ -206,29 +218,36 @@
     <li data-ko="탐지 기술을 뉴스 제작의 원칙·규범 논의로 연결합니다." data-en="Detection technology is linked to principles and norms for news production."></li>
    </ul>
    <div class="rev">
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="논문" data-en="Papers"></span><span class="gcnt">3</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+    <div class="rtabs">
+     <button class="rtab" onclick="showTab(this)" data-ko="논문 <i>3</i>" data-en="Papers <i>3</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="학술대회 <i>1</i>" data-en="Conference <i>1</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="특허 <i>1</i>" data-en="Patents <i>1</i>"></button>
+     <button class="rtab" onclick="showTab(this)" data-ko="저서 <i>1</i>" data-en="Books <i>1</i>"></button>
+    </div>
+    <div class="rpanels">
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="Tampered and Computer-Generated Face Images Identification Based on Deep Learning<span class='m'>Applied Sciences · 2020 · SCIE</span>" data-en="Tampered and Computer-Generated Face Images Identification Based on Deep Learning<span class='m'>Applied Sciences · 2020 · SCIE</span>"></li>
       <li data-ko="Deep Learning based Computer Generated Face Identification using Convolutional Neural Network<span class='m'>Applied Sciences · 2018 · SCIE</span>" data-en="Deep Learning based Computer Generated Face Identification using Convolutional Neural Network<span class='m'>Applied Sciences · 2018 · SCIE</span>"></li>
       <li data-ko="가짜뉴스 탐지를 위한 BERT 문맥 및 EmoBERTa 감정 특징 기반 하이브리드 아키텍처<span class='m'>융복합지식학회논문지 · 2025 · KCI</span>" data-en="A hybrid architecture using BERT context and EmoBERTa emotion features for fake-news detection<span class='m'>J. Convergence Knowledge · 2025 · KCI</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="학술대회" data-en="Conference"></span><span class="gcnt">1</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="Face Recognition Using Shallow Age-Invariant Data<span class='m'>36th Int'l Conf. on Image and Vision Computing New Zealand (IVCNZ) · 2021</span>" data-en="Face Recognition Using Shallow Age-Invariant Data<span class='m'>36th Int'l Conf. on Image and Vision Computing New Zealand (IVCNZ) · 2021</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="특허" data-en="Patents"></span><span class="gcnt">1</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="가짜 뉴스 탐지 방법 및 그 장치<span class='m'>출원 10-2026-0017009 · 2026.01.02</span>" data-en="Method and apparatus for fake-news detection<span class='m'>Filed 10-2026-0017009 · 2026.01.02</span>"></li>
-     </ul></details>
-
-    <details class="rgroup"><summary><span class="rlab" data-ko="저서" data-en="Books"></span><span class="gcnt">1</span><span class="chev">▼</span></summary>
-     <ul class="ritems">
+     </ul>
+     </div>
+     <div class="rpanel" hidden>
+      <ul class="ritems">
       <li data-ko="『AI 뉴스룸: 기술·원칙·규범』<span class='m'>최승재·손승혜·이수진 · 커뮤니케이션북스 · 2026</span>" data-en="The AI Newsroom: Technology, Principles, Norms<span class='m'>S. Choi, S. Son, SuJin Lee · CommunicationBooks · 2026</span>"></li>
-     </ul></details>
-
+     </ul>
+     </div>
+    </div>
    </div>
   </article>
 
@@ -242,13 +261,14 @@
 <footer><div class="wrap"><div class="foot-note"><span>© <span id="yr"></span> HCAI Lab · SuJin Lee</span><span>Human-Centered AI &amp; Media Engineering</span></div></div></footer>
 <script src="script.js"></script>
 <script>
-function toggleAll(btn){
- var card=btn.closest('.rcard'), ds=card.querySelectorAll('details.rgroup'), open=true;
- ds.forEach(function(d){ if(!d.open) open=false; });
- ds.forEach(function(d){ d.open=!open; });
- btn.setAttribute('data-ko', open?'＋ 실적 모두 보기':'－ 실적 접기');
- btn.setAttribute('data-en', open?'＋ Show all':'－ Collapse all');
- btn.innerHTML=btn.getAttribute('data-'+(document.documentElement.lang==='en'?'en':'ko'));
+function showTab(btn){
+ var tabs=btn.parentNode, rev=tabs.parentNode,
+     panels=rev.querySelector('.rpanels').children,
+     list=Array.prototype.slice.call(tabs.children),
+     i=list.indexOf(btn), was=btn.classList.contains('on');
+ list.forEach(function(t){t.classList.remove('on');});
+ Array.prototype.forEach.call(panels,function(p){p.hidden=true;});
+ if(!was){btn.classList.add('on'); panels[i].hidden=false;}
 }
 </script>
 </body></html>
